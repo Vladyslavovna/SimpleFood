@@ -4,27 +4,27 @@ $orange-900: #ff6838;
 $darkBlue-900: #363853;
 $silver-200: #ececec;
 $silver-100: #f9faff;
+$white: #fff;
 
-
-
+%background-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 %rubik-light {
   font-family: "Rubik-Light", sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 1.4;
 }
 
 %rubik-medium {
   font-family: "Rubik-Medium", sans-serif;
   font-weight: 500;
-  font-size: 32px;
 }
 
 %rubik-regular {
   font-family: "Rubik-Regular", sans-serif;
   font-weight: 400;
-  font-size: 30px;
 }
 
 %small-paragrapgh {
