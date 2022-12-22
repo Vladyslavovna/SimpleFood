@@ -1,7 +1,65 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+.header {
+  &__wrap {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  transition: opacity 0.5s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  @extend %rubik-regular;
+  font-size: 18px;
+  line-height: 1;
+  &__list {
+    display: flex;
+    margin-right: 62px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 43px;
+  }
+}
+
+.user {
+  display: flex;
+  &__item {
+	position: relative;
+  }
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+  &__num {
+	  position: absolute;
+	  width: 14px;
+	  height: 14px;
+	  border-radius: 50%;
+	  background-color: $orange-900;
+	  color: #fff;
+	  top: -5px;
+	  right: -5px;
+	  font-size: 12px;
+	  line-height: 1.2;
+	  text-align: center;
+  }
+}
 
 
-@import 'media';
+@import "media";
