@@ -4,8 +4,6 @@
 @import "global";
 
 .header {
-  width: 100%;
-  background-color: $silver-100;
   padding: 60px 0;
   &__wrap {
     display: flex;
@@ -60,6 +58,46 @@
     font-size: 12px;
     line-height: 1.2;
     text-align: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  &__link {
+    transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out,border-radius 0.5s ease-in-out;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+    &:hover {
+      background-color: $orange-900;
+    }
+    &:active {
+      background-color: $peach;
+    }
+    &:hover .user__num {
+      background-color: $white;
+      color: $orange-900;
+    }
+    &:active .user__num {
+      background-color: $orange-900;
+      color: $white;
+    }
+    &:hover .user__icon {
+      stroke: $white;
+    }
+    &:active .user__icon {
+      stroke: $dark;
+    }
+  }
+  &__icon {
+    width: 18px;
+    height: 18px;
+    fill: transparent;
+    stroke-width: 1.5;
+    stroke: $dark;
+    transition: stroke 0.5s ease;
   }
 }
 
@@ -89,6 +127,27 @@
   }
   &__link {
     margin-left: 34px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $dark;
+      bottom: 1px;
+      transform: scale(1);
+      left: 0;
+      transition: 0.5s;
+    }
+    &:focus::after {
+      transform: scale(0);
+    }
+    &:active::after {
+	transform: scale(0);
+   }
+   &:hover::after {
+	transform: scale(0);
+   }
   }
 }
 
