@@ -38,14 +38,14 @@
 					<ul class="user">
 						<li class="user__item">
 							<a class="user__link">
-								<svg class="user__icon">
+								<svg class="user__icon icon">
 									<use xlink:href="images/sprite.svg#icon-search"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="user__item">
 							<a class="user__link">
-								<svg class="user__icon">
+								<svg class="user__icon icon">
 									<use xlink:href="images/sprite.svg#icon-cart"></use>
 								</svg>
 								<span class="user__num">4</span>
@@ -58,6 +58,7 @@
 	</header>
 
 	<main>
+
 		<section class="hero">
 			<div class="container">
 				<div class="hero__wrap">
@@ -77,12 +78,245 @@
 							Подробнее
 						</a>
 					</div>
-					<div class="hero__image" style="background-image: url(images/hero/scooter-guy.svg);"></div>
+					<figure class="hero__image" style="background-image: url(images/hero/scooter-guy.svg);">
+					</figure>
 				</div>
 			</div>
 		</section>
-	</main>
 
+		<section class="popular">
+			<div class="container">
+				<div class="popular__nav">
+					<h2 class="popular__title title">Популярные категории</h2>
+					<ul class="popular__list">
+						<li class="popular__item">
+							<a class="popular__link">
+								<svg class="popular__icon icon">
+									<use xlink:href="images/sprite.svg#icon-burger"></use>
+								</svg>
+								<span class="popular__subtitle">Бургер</span>
+							</a>
+						</li>
+						<li class="popular__item">
+							<a class="popular__link">
+								<svg class="popular__icon icon">
+									<use xlink:href="images/sprite.svg#icon-pizza"></use>
+								</svg>
+								<span class="popular__subtitle">Пицца</span>
+							</a>
+						</li>
+						<li class="popular__item">
+							<a class="popular__link">
+								<svg class="popular__icon icon">
+									<use xlink:href="images/sprite.svg#icon-sanvich"></use>
+								</svg>
+								<span class="popular__subtitle">Сендвичи</span>
+							</a>
+						</li>
+						<li class="popular__item">
+							<a class="popular__link">
+								<svg class="popular__icon icon">
+									<use xlink:href="images/sprite.svg#icon-asia"></use>
+								</svg>
+								<span class="popular__subtitle">Азиатская кухня</span>
+							</a>
+						</li>
+						<li class="popular__item">
+							<a class="popular__link">
+								<svg class="popular__icon icon">
+									<use xlink:href="images/sprite.svg#icon-plate"></use>
+								</svg>
+								<span class="popular__subtitle">Сеты</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="catalog">
+
+					<li class="catalog__item">
+						<article class="card">
+							<div class="card__image">
+								<a class="card__link" href="#">
+									<img src="images/card/cheesburger.svg" alt="kjndaslkjsadlkj" width="140"
+										height="140">
+								</a>
+								<div class="card__title">
+									<span>Чизбургер с листьями салата</span>
+								</div>
+							</div>
+							<div class="card__description">
+								<h3 class="card__price">160 грн</h3>
+								<button class="card__btn button">В корзину</button>
+							</div>
+						</article>
+					</li>
+
+					<li class="catalog__item">
+						<article class="card">
+							<div class="card__image">
+								<a class="card__link" href="#">
+									<img src="images/card/beefburger.svg" alt="kjndaslkjsadlkj" width="140"
+										height="140">
+								</a>
+								<div class="card__title">
+									<span>Бифбургер</span>
+								</div>
+							</div>
+							<div class="card__description">
+								<h3 class="card__price">190 грн</h3>
+								<button class="card__btn button">В корзину</button>
+							</div>
+						</article>
+					</li>
+					<li class="catalog__item">
+						<article class="card">
+							<div class="card__image">
+								<a class="card__link" href="#">
+									<img src="images/card/royalcheese.svg" alt="kjndaslkjsadlkj" width="140"
+										height="140">
+								</a>
+								<div class="card__title">
+									<span>Королевский чизбургер</span>
+								</div>
+							</div>
+							<div class="card__description">
+								<h3 class="card__price">260 грн</h3>
+								<button class="card__btn button">В корзину</button>
+							</div>
+						</article>
+					</li>
+					<li class="catalog__item">
+						<article class="card">
+							<div class="card__image">
+								<a class="card__link" href="#">
+									<img src="images/card/blackcburg.svg" alt="kjndaslkjsadlkj" width="140"
+										height="140">
+								</a>
+								<div class="card__title">
+									<span>Черный гамбургер</span>
+								</div>
+							</div>
+							<div class="card__description">
+								<h3 class="card__price">199 грн</h3>
+								<button class="card__btn button">В корзину</button>
+							</div>
+						</article>
+					</li>
+					<li class="catalog__item">
+						<article class="card">
+							<div class="card__image">
+								<a class="card__link" href="#">
+									<img src="images/card/chickenburg.svg" alt="kjndaslkjsadlkj" width="140"
+										height="140">
+								</a>
+								<div class="card__title">
+									<span>Чикен бургер</span>
+								</div>
+							</div>
+							<div class="card__description">
+								<h3 class="card__price">180 грн</h3>
+								<button class="card__btn button">В корзину</button>
+							</div>
+						</article>
+					</li>
+					<li class="catalog__item">
+						<article class="card">
+							<div class="card__image">
+								<a class="card__link" href="#">
+									<img src="images/card/cheesburger.svg" alt="kjndaslkjsadlkj" width="140"
+										height="140">
+								</a>
+								<div class="card__title">
+									<span>Чизбургер с листьями салата</span>
+								</div>
+							</div>
+							<div class="card__description">
+								<h3 class="card__price">160 грн</h3>
+								<button class="card__btn button">В корзину</button>
+							</div>
+						</article>
+					</li>
+
+					<li class="catalog__item">
+						<article class="card">
+							<div class="card__image">
+								<a class="card__link" href="#">
+									<img src="images/card/beefburger.svg" alt="kjndaslkjsadlkj" width="140"
+										height="140">
+								</a>
+								<div class="card__title">
+									<span>Бифбургер</span>
+								</div>
+							</div>
+							<div class="card__description">
+								<h3 class="card__price">190 грн</h3>
+								<button class="card__btn button">В корзину</button>
+							</div>
+						</article>
+					</li>
+					<li class="catalog__item">
+						<article class="card">
+							<div class="card__image">
+								<a class="card__link" href="#">
+									<img src="images/card/royalcheese.svg" alt="kjndaslkjsadlkj" width="140"
+										height="140">
+								</a>
+								<div class="card__title">
+									<span>Королевский чизбургер</span>
+								</div>
+							</div>
+							<div class="card__description">
+								<h3 class="card__price">260 грн</h3>
+								<button class="card__btn button">В корзину</button>
+							</div>
+						</article>
+					</li>
+					<li class="catalog__item">
+						<article class="card">
+							<div class="card__image">
+								<a class="card__link" href="#">
+									<img src="images/card/blackcburg.svg" alt="kjndaslkjsadlkj" width="140"
+										height="140">
+								</a>
+								<div class="card__title">
+									<span>Черный гамбургер</span>
+								</div>
+							</div>
+							<div class="card__description">
+								<h3 class="card__price">199 грн</h3>
+								<button class="card__btn button">В корзину</button>
+							</div>
+						</article>
+					</li>
+					<li class="catalog__item">
+						<article class="card">
+							<div class="card__image">
+								<a class="card__link" href="#">
+									<img src="images/card/chickenburg.svg" alt="kjndaslkjsadlkj" width="140"
+										height="140">
+								</a>
+								<div class="card__title">
+									<span>Чикен бургер</span>
+								</div>
+							</div>
+							<div class="card__description">
+								<h3 class="card__price">180 грн</h3>
+								<button class="card__btn button">В корзину</button>
+							</div>
+						</article>
+					</li>
+				</ul>
+				<a class="catalog__link links" href="#">
+					Смотреть ещё
+				</a>
+			</div>
+		</section>
+
+
+
+
+	</main>
 </body>
 
 
