@@ -169,15 +169,10 @@
   &__item {
     display: flex;
     align-items: center;
-
     transition: all 0.4s ease;
-
     border-radius: 5px;
     &:not(:last-child) {
       margin-right: 10px;
-    }
-    &:active {
-      box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
     }
   }
   &__link {
@@ -188,8 +183,8 @@
     box-shadow: 0 0 0 1px $silver-200;
     border-radius: 5px;
     cursor: pointer;
-    transition: box-shadow 0.5s ease-in, background-color 0.5s ease-in,
-      color 0.5s ease-in;
+    transition: box-shadow 0.5s ease, background-color 0.5s ease,
+      color 0.5s ease;
     &:hover {
       color: $orange-900;
       box-shadow: 0 0 0 2px $peach-shadow;
@@ -202,6 +197,8 @@
     }
     &:active {
       color: $dark;
+      box-shadow: 0 0 0 2px $silver-100,
+        inset 0 -5px 12px rgba(255, 104, 56, 0.2);
     }
     &:active .popular__icon {
       stroke: $dark;
@@ -258,43 +255,172 @@
   }
 }
 
-.card {
-  align-items: center;
-  padding: 10px 15px 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 0 1px $silver-200;
-  transition: box-shadow 0.5s ease-in-out;
-  &__image {
-    margin-bottom: 10px;
-    text-align: center;
+.footer {
+  &__top {
+    padding-bottom: 71px;
   }
-  &__link {
-    display: inline-block;
-  }
-  &__description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  &__title {
-    @extend %bold-paragraph;
-    line-height: 18px;
-  }
-  &__price {
-    @extend %bold-paragraph;
+}
+
+.form {
+  max-width: 200px;
+  width: 100%;
+  &__input {
+    width: 100%;
+    margin: 30px 0 12px;
+    border: 1px solid $silver-200;
+    border-radius: 5px;
+    padding: 13px 15px;
+    transition: box-shadow 0.5s ease-in-out;
+    &:focus {
+      box-shadow: 0px 0px 0px 2px $orange-900;
+    }
+    &::placeholder {
+      color: $silver-200;
+      @extend %small-paragrapgh;
+      line-height: 1.3;
+      opacity: 0.9;
+      transition: color 0.5s ease;
+    }
+    &:hover::placeholder {
+      color: $dark;
+    }
   }
   &__btn {
-    padding: 7px 16px;
-    @extend %small-paragrapgh;
+    width: 100%;
+    font-size: 14px;
     line-height: 1.3;
-    color: $white;
-    background-color: $orange-900;
-    margin: 10px 0;
+    @extend %rubik-medium;
   }
-  &:hover {
-    box-shadow: 0 0 0 1px $orange-900;
+  &__btn:hover .form__icon {
+    fill: $orange-900;
   }
+  &__btn:active .form__icon {
+    fill: $orange-900;
+  }
+  &__btn:focus .form__icon {
+    fill: $orange-900;
+  }
+  &__icon {
+    margin-right: 13px;
+    fill: $white;
+    stroke: transparent;
+    width: 17px;
+    height: 15px;
+    transition: fill 0.5s ease-out;
+  }
+}
+
+.footer {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list {
+    max-width: 571px;
+    display: grid;
+    grid-template-columns: repeat(3, 190px);
+  }
+  &__link {
+    margin-bottom: 20px;
+    @extend %rubik-medium;
+    font-size: 16px;
+    line-height: 32px;
+  }
+  &__bottom {
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.adress {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    margin-bottom: 15px;
+  }
+  &__link {
+    @extend %rubik-medium;
+    font-size: 16px;
+    line-height: 32px;
+  }
+  &__social {
+    display: flex;
+  }
+  &__elem {
+    margin-right: 13px;
+    width: 39px;
+    height: 39px;
+    background-color: $silver-200;
+    border-radius: 50%;
+    transition: box-shadow 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    &:focus {
+      background-color: $peach;
+      box-shadow: 0 0 0 2px $peach-shadow;
+    }
+    &:hover {
+      background-color: $orange-900;
+    }
+    &:active {
+      background-color: $peach;
+    }
+  }
+  &__reference {
+    display: block;
+    text-align: center;
+  }
+  &__marks {
+    transform: translate(-7px, 7px);
+    width: 24px;
+    height: 24px;
+  }
+
+  &__icon {
+    &--facebook {
+      fill: $dark;
+      stroke: transparent;
+      transform: translateY(38%);
+      width: 10px;
+      height: 22px;
+      transition: fill 0.5s ease;
+      &:hover {
+        fill: $white;
+      }
+      &:active {
+        fill: $orange-900;
+      }
+    }
+    &--twitter {
+		transform: translateY(50%);
+		stroke: transparent;
+		fill: $dark;
+		width: 20px;
+		height: 16px;
+		transition: fill 0.5s ease;
+		&:hover {
+		  fill: $white;
+		}
+		&:active {
+		  fill: $orange-900;
+		}
+	   }
+	   &--instagram {
+		transform: translateY(50%);
+		stroke: transparent;
+		width: 19px;
+		height: 19px;
+		fill: $dark;
+		transition: fill 0.5s ease;
+		&:hover {
+		  fill: $white;
+		}
+		&:active {
+		  fill: $orange-900;
+		}
+	   }
+    }
 }
 
 @import "media";
