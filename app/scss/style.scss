@@ -1,6 +1,6 @@
-@import "vars";
-@import "fonts";
 @import "reset";
+@import "fonts";
+@import "vars";
 @import "global";
 
 .header {
@@ -32,6 +32,9 @@
   &__list {
     display: flex;
     margin-right: 62px;
+  }
+  &__item--color{
+	color: $orange-900;
   }
   &__item:not(:last-child) {
     margin-right: 43px;
@@ -123,29 +126,8 @@
     font-size: 20px;
     line-height: 1.5;
   }
-  &__link {
-    margin-left: 34px;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background-color: $dark;
-      bottom: 1px;
-      transform: scale(1);
-      left: 0;
-      transition: 0.5s;
-    }
-    &:focus::after {
-      transform: scale(0);
-    }
-    &:active::after {
-      transform: scale(0);
-    }
-    &:hover::after {
-      transform: scale(0);
-    }
+  &__btn{
+	margin-right: 35px;
   }
   &__image {
     @extend %background-image;
@@ -169,7 +151,6 @@
   &__item {
     display: flex;
     align-items: center;
-    transition: all 0.4s ease;
     border-radius: 5px;
     &:not(:last-child) {
       margin-right: 10px;
@@ -230,32 +211,18 @@
     max-width: 210px;
     width: 100%;
   }
-  &__link {
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background-color: $dark;
-      bottom: 1px;
-      transform: scale(1);
-      left: 0;
-      transition: 0.5s;
-    }
-    &:focus::after {
-      transform: scale(0);
-    }
-    &:active::after {
-      transform: scale(0);
-    }
-    &:hover::after {
-      transform: scale(0);
-    }
-  }
 }
 
 .footer {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 242px;
+    background-color: $silver-200;
+  }
   &__top {
     padding-bottom: 71px;
   }
@@ -269,7 +236,7 @@
     margin: 30px 0 12px;
     border: 1px solid $silver-200;
     border-radius: 5px;
-    padding: 13px 15px;
+    padding: 10px 15px;
     transition: box-shadow 0.5s ease-in-out;
     &:focus {
       box-shadow: 0px 0px 0px 2px $orange-900;
@@ -393,34 +360,34 @@
       }
     }
     &--twitter {
-		transform: translateY(50%);
-		stroke: transparent;
-		fill: $dark;
-		width: 20px;
-		height: 16px;
-		transition: fill 0.5s ease;
-		&:hover {
-		  fill: $white;
-		}
-		&:active {
-		  fill: $orange-900;
-		}
-	   }
-	   &--instagram {
-		transform: translateY(50%);
-		stroke: transparent;
-		width: 19px;
-		height: 19px;
-		fill: $dark;
-		transition: fill 0.5s ease;
-		&:hover {
-		  fill: $white;
-		}
-		&:active {
-		  fill: $orange-900;
-		}
-	   }
+      transform: translateY(50%);
+      stroke: transparent;
+      fill: $dark;
+      width: 20px;
+      height: 16px;
+      transition: fill 0.5s ease;
+      &:hover {
+        fill: $white;
+      }
+      &:active {
+        fill: $orange-900;
+      }
     }
+    &--instagram {
+      transform: translateY(50%);
+      stroke: transparent;
+      width: 19px;
+      height: 19px;
+      fill: $dark;
+      transition: fill 0.5s ease;
+      &:hover {
+        fill: $white;
+      }
+      &:active {
+        fill: $orange-900;
+      }
+    }
+  }
 }
 
 @import "media";
