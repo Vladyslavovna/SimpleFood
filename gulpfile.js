@@ -19,6 +19,7 @@ function browsersync() {
   });
 }
 
+
 function styles() {
   return src("app/scss/style.scss")
     .pipe(scss({ outputStyle: "expanded" }).on("error", scss.logError))
@@ -34,7 +35,7 @@ function styles() {
 }
 
 function scripts() {
-  return src(["node_modules/jquery/dist/jquery.js", "app/js/main.js"])
+  return src(["node_modules/jquery/dist/jquery.js",'node_modules/mixitup/dist/mixitup.js', "app/js/main.js"])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -55,8 +56,6 @@ function images() {
     )
     .pipe(dest("dist/images"));
 }
-
-
 
 function svgSprites() {
   return src("app/images/icons/*.svg")
