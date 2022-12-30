@@ -37,6 +37,10 @@ body {
   overflow: hidden;
 }
 
+.section {
+  padding: 120px 0;
+}
+
 .button {
   padding: 12px 32px;
   background-color: $orange-900;
@@ -108,11 +112,45 @@ body {
   }
 }
 
+.search {
+  display: inline-block;
+  padding: 12px 32px;
+  margin-right: 35px;
+  background-color: $orange-900;
+  color: $white;
+  border-radius: 6px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease-in, background-color 0.5s ease-in,
+    color 0.5s ease-in;
+  &:focus {
+    box-shadow: 0 0 0 2px $peach-shadow;
+    background-color: $light-peach;
+    color: $orange-900;
+  }
+  &:hover {
+    background-color: $white;
+    box-shadow: 0 5px 12px rgba(255, 104, 56, 0.2), 0 0 0 2px $peach-shadow;
+    color: $orange-900;
+  }
+  &:active {
+    background-color: $light-peach;
+    color: $orange-900;
+  }
+}
+
 .title {
   display: block;
   font-weight: 600;
   font-size: 36px;
   line-height: 1.3;
+  color: $title;
+}
+
+.descr {
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .card {
