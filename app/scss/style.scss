@@ -160,6 +160,7 @@
     padding: 12px 40px;
     display: flex;
     align-items: center;
+    font-size: 20px;
     line-height: 1.3;
     background-color: $white;
     box-shadow: 0 0 0 1px $silver-200;
@@ -168,38 +169,41 @@
       color 0.5s ease;
     &:hover {
       color: $orange-900;
-    }
-    &:focus {
-      color: $dark;
-      background-color: $white;
-      box-shadow: 0 0 0 2px $peach-shadow;
-    }
-    &:hover {
-      color: $orange-900;
       background-color: $light-peach;
       box-shadow: 0 0 0 2px $peach-shadow;
-    }
-    &:active {
-      color: $dark;
-      box-shadow: 0 0 0 2px $silver-100,
-        inset 0 -5px 12px rgba(255, 104, 56, 0.2);
     }
     &:hover .popular__icon {
       fill: $orange-900;
       stroke: $orange-900;
     }
-
-    &:active .popular__icon {
-      stroke: $dark;
-      fill: $dark;
+    &:focus {
+      box-shadow: 0px 0px 0px 2px $peach-shadow;
     }
     &:focus .popular__icon {
-      stroke: $dark;
       fill: $dark;
+      stroke: $dark;
     }
-    &--elem {
+    &:active {
+      box-shadow: 0 0 0 2px $silver-100,
+        inset 0 -5px 12px rgba(255, 104, 56, 0.2);
+    }
+
+    &--btn {
       background-color: $orange-900;
       color: $white;
+      &:hover {
+        color: $orange-900;
+        background-color: $light-peach;
+        box-shadow: 0 0 0 2px $peach-shadow;
+      }
+      &:hover .popular__icon--elem {
+        fill: $orange-900;
+        stroke: $orange-900;
+      }
+      &:active {
+        box-shadow: 0 0 0 2px $silver-100,
+          inset 0 -5px 12px rgba(255, 104, 56, 0.2);
+      }
     }
   }
   &__subtitle {
@@ -236,11 +240,11 @@
 }
 
 .mixitup-control-active {
-  color: $white;
-  &:hover .popular__icon--elem {
-    fill: $orange-900;
-    stroke: $orange-900;
+  &:active .popular__icon {
+    stroke: $dark;
+    fill: $dark;
   }
+
   &:active .popular__icon--elem {
     fill: $orange-900;
     stroke: $orange-900;
@@ -249,21 +253,9 @@
     fill: $dark;
     stroke: $dark;
   }
-  &:hover {
-    color: $orange-900;
-  }
   &:focus {
     color: $dark;
     background-color: $white;
-  }
-  &:hover {
-    color: $orange-900;
-    background-color: $light-peach;
-    box-shadow: 0 0 0 2px $peach-shadow;
-  }
-  &:active {
-    color: $dark;
-    box-shadow: 0 0 0 2px $silver-100, inset 0 -5px 12px rgba(255, 104, 56, 0.2);
   }
 }
 
@@ -271,6 +263,7 @@
   &__wrap {
     display: flex;
     align-items: center;
+    justify-content: space-around;
   }
   &__image {
     @extend %background-image;
@@ -281,7 +274,6 @@
   &__info {
     max-width: 450px;
     width: 100%;
-    margin-left: 120px;
   }
   &__title {
     margin-bottom: 30px;
@@ -315,6 +307,108 @@
     }
     &--resturent {
       fill: $red;
+    }
+  }
+}
+
+.resturant {
+  &__title {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  &__catalog {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: 30px;
+  }
+}
+
+.card {
+  &__resturant {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.4s ease-out;
+    &:hover {
+      box-shadow: 0px 3px 15px rgba(255, 104, 56, 0.5);
+    }
+    &-image {
+      border-radius: 10px 10px 0px 0px;
+    }
+    &-inner {
+      background-color: $white;
+      padding: 15px 20px 20px;
+      border-radius: 10px;
+    }
+    &-title {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 24px;
+      line-height: 1.3;
+      &--kfc {
+        text-transform: uppercase;
+      }
+    }
+    &-nav {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
+    &-mark {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+      transform: translateY(5px);
+      fill: $dark;
+      stroke-width: 0.5;
+    }
+    &-time {
+      opacity: 0.9;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+    &-reference {
+      padding: 4px 27px;
+      background-color: $orange-900;
+      border-radius: 20px;
+      &:focus {
+        background-color: $peach;
+        box-shadow: 0 0 0 2px $peach-shadow;
+      }
+      &:focus .card__resturant-icon {
+        fill: $orange-900;
+      }
+      &:hover {
+        background-color: $white;
+        box-shadow: 0 0 0 2px $peach-shadow;
+      }
+      &:hover .card__resturant-icon {
+        fill: $orange-900;
+        transform: translateX(15px);
+      }
+      &:active {
+        background-color: $peach;
+      }
+      &:active .card__resturant-icon {
+        fill: $orange-900;
+        transform: translateX(0);
+      }
+    }
+    &-icon {
+      width: 14px;
+      height: 12px;
+      fill: $white;
+      stroke: transparent;
+      transition: transform 0.5s ease;
     }
   }
 }

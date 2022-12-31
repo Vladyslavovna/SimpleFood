@@ -109,7 +109,7 @@
 				<ul class="popular__list">
 
 					<li class="popular__item">
-						<button class="popular__button popular__button--elem" data-filter="all">
+						<button class="popular__button popular__button--btn" data-filter="all">
 							<svg class="popular__icon popular__icon--elem icon">
 								<use xlink:href="images/sprite.svg#icon-burger"></use>
 							</svg>
@@ -159,7 +159,7 @@
 				<ul class="popular__catalog">
 
 					<li class="popular__catalog-item mix category-a">
-						<article class="card">
+						<article class="card__menu">
 
 							<a class="card__link" href="#">
 								<img src="images/card/cheesburger.svg" alt="Картинка чизбургера" width="140"
@@ -175,7 +175,7 @@
 					</li>
 
 					<li class="popular__catalog-item mix category-a">
-						<article class="card">
+						<article class="card__menu">
 
 							<a class="card__link" href="#">
 								<img src="images/card/beefburger.svg" alt="Картинка бифбургера" width="140"
@@ -191,7 +191,7 @@
 					</li>
 
 					<li class="popular__catalog-item mix category-a">
-						<article class="card">
+						<article class="card__menu">
 
 							<a class="card__link" href="#">
 								<img src="images/card/royalcheese.svg" alt="Картинка королевского чизбургера"
@@ -207,7 +207,7 @@
 					</li>
 
 					<li class="popular__catalog-item mix category-b">
-						<article class="card">
+						<article class="card__menu">
 
 							<a class="card__link" href="#">
 								<img src="images/card/blackcburg.svg" alt="Картинка черного гамбургера"
@@ -223,7 +223,7 @@
 					</li>
 
 					<li class="popular__catalog-item mix category-c">
-						<article class="card">
+						<article class="card__menu">
 
 							<a class="card__link" href="#">
 								<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
@@ -239,7 +239,7 @@
 					</li>
 
 					<li class="popular__catalog-item mix category-c">
-						<article class="card">
+						<article class="card__menu">
 
 							<a class="card__link" href="#">
 								<img src="images/card/cheesburger.svg"
@@ -255,7 +255,7 @@
 					</li>
 
 					<li class="popular__catalog-item mix category-c">
-						<article class="card">
+						<article class="card__menu">
 
 							<a class="card__link" href="#">
 								<img src="images/card/beefburger.svg" alt="Картинка бифбургера" width="140"
@@ -271,7 +271,7 @@
 					</li>
 
 					<li class="popular__catalog-item mix category-d">
-						<article class="card">
+						<article class="card__menu">
 
 							<a class="card__link" href="#">
 								<img src="images/card/royalcheese.svg" alt="Картинка королевского чизбургера"
@@ -287,7 +287,7 @@
 					</li>
 
 					<li class="popular__catalog-item  mix category-e">
-						<article class="card">
+						<article class="card__menu">
 
 							<a class="card__link" href="#">
 								<img src="images/card/blackcburg.svg" alt="Картинка черного бургера" width="140"
@@ -303,7 +303,7 @@
 					</li>
 
 					<li class="popular__catalog-item mix category-e">
-						<article class="card">
+						<article class="card__menu">
 
 							<a class="card__link" href="#">
 								<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
@@ -331,7 +331,8 @@
 		<section class="features section">
 			<div class="container">
 				<div class="features__wrap">
-					<div class="features__image" style="background-image: url(images/features/food-delivery.png);"></div>
+					<div class="features__image" style="background-image: url(images/features/food-delivery.png);">
+					</div>
 					<div class="features__info">
 						<h2 class="features__title title">
 							Оставайтесь дома,
@@ -372,6 +373,187 @@
 						</a>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<section class="resturant section">
+			<div class="container">
+				<h2 class=" resturant__title title">Лучшие рестораны</h2>
+				<ul class="resturant__catalog">
+
+					<li class="resturant__item">
+						<article class="card__resturant">
+								<img class="card__resturant-image" src="images/resturant/Blaze-pizza.jpg" alt="Картинка пиццы от Blaze-pizza"
+									width="370" height="300">
+							
+							<div class="card__resturant-inner">
+								<span class="card__resturant-title">
+									Blaze Pizza
+								</span>
+								<div class="card__resturant-nav">
+
+									<time class="card__resturant-time">
+										<svg class="card__resturant-mark icon">
+											<use xlink:href="images/sprite.svg#icon-clock"></use>
+										</svg>
+										11:00 - 22:00
+									</time>
+
+									<a class="card__resturant-reference" href="#">
+										<svg class="card__resturant-icon icon">
+											<use xlink:href="images/sprite.svg#icon-arrowright"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li class="resturant__item">
+						<article class="card__resturant">
+							
+								<img class="card__resturant-image" src="images/resturant/Pizza-runcho.jpg" alt="Картинка пиццы от Blaze-pizza"
+									width="370" height="300">
+							
+							<div class="card__resturant-inner">
+								<span class="card__resturant-title">
+									Pizza Runcho
+								</span>
+								<div class="card__resturant-nav">
+
+									<time class="card__resturant-time">
+										<svg class="card__resturant-mark icon">
+											<use xlink:href="images/sprite.svg#icon-clock"></use>
+										</svg>
+										12:00 - 21:00
+									</time>
+
+									<a class="card__resturant-reference" href="#">
+										<svg class="card__resturant-icon icon">
+											<use xlink:href="images/sprite.svg#icon-arrowright"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li class="resturant__item">
+						<article class="card__resturant">
+							
+								<img class="card__resturant-image" src="images/resturant/Pizza-hut.jpg" alt="Картинка пиццы от Blaze-pizza"
+									width="370" height="300">
+						
+							<div class="card__resturant-inner">
+								<span class="card__resturant-title">
+									Pizza Hut
+								</span>
+								<div class="card__resturant-nav">
+
+									<time class="card__resturant-time">
+										<svg class="card__resturant-mark icon">
+											<use xlink:href="images/sprite.svg#icon-clock"></use>
+										</svg>
+										11:00 - 22:00
+									</time>
+
+									<a class="card__resturant-reference" href="#">
+										<svg class="card__resturant-icon icon">
+											<use xlink:href="images/sprite.svg#icon-arrowright"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li class="resturant__item">
+						<article class="card__resturant">
+							
+								<img class="card__resturant-image" src="images/resturant/Mc-Donalds.jpg" alt="Картинка пиццы от Blaze-pizza"
+									width="370" height="300">
+							
+							<div class="card__resturant-inner">
+								<span class="card__resturant-title">
+									McDonald`s
+								</span>
+								<div class="card__resturant-nav">
+
+									<time class="card__resturant-time">
+										<svg class="card__resturant-mark icon">
+											<use xlink:href="images/sprite.svg#icon-clock"></use>
+										</svg>
+										06:00 - 23:00
+									</time>
+
+									<a class="card__resturant-reference" href="#">
+										<svg class="card__resturant-icon icon">
+											<use xlink:href="images/sprite.svg#icon-arrowright"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li class="resturant__item">
+						<article class="card__resturant">
+							
+								<img class="card__resturant-image" src="images/resturant/Kfc.jpg" alt="Картинка пиццы от Blaze-pizza"
+									width="370" height="300">
+							
+							<div class="card__resturant-inner">
+								<span class="card__resturant-title card__resturant-title--kfc">
+									Kfc
+								</span>
+								<div class="card__resturant-nav">
+
+									<time class="card__resturant-time">
+										<svg class="card__resturant-mark icon">
+											<use xlink:href="images/sprite.svg#icon-clock"></use>
+										</svg>
+										06:00 - 23:30
+									</time>
+
+									<a class="card__resturant-reference" href="#">
+										<svg class="card__resturant-icon icon">
+											<use xlink:href="images/sprite.svg#icon-arrowright"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li class="resturant__item">
+						<article class="card__resturant">
+							
+								<img class="card__resturant-image" src="images/resturant/Star-Burger.jpg" alt="Картинка пиццы от Blaze-pizza"
+									width="370" height="300">
+						
+							<div class="card__resturant-inner">
+								<span class="card__resturant-title">
+									Star Burgers
+								</span>
+								<div class="card__resturant-nav">
+
+									<time class="card__resturant-time">
+										<svg class="card__resturant-mark icon">
+											<use xlink:href="images/sprite.svg#icon-clock"></use>
+										</svg>
+										09:00 - 21:00
+									</time>
+
+									<a class="card__resturant-reference" href="#">
+										<svg class="card__resturant-icon icon">
+											<use xlink:href="images/sprite.svg#icon-arrowright"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</article>
+					</li>
+
+
+
+
+
+				</ul>
 			</div>
 		</section>
 
