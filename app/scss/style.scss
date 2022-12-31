@@ -129,6 +129,7 @@
     margin-bottom: 20px;
     font-size: 20px;
     line-height: 1.5;
+    opacity: 0.9;
   }
 
   &__image {
@@ -410,6 +411,39 @@
       stroke: transparent;
       transition: transform 0.5s ease;
     }
+  }
+}
+
+.app {
+  padding-bottom: 120px;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__image {
+    max-width: 570px;
+    height: 380px;
+    width: 100%;
+  }
+  &__about {
+    max-width: 530px;
+    width: 100%;
+  }
+  &__title {
+    margin-bottom: 45px;
+  }
+  &__description {
+    font-size: 20px;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 30px;
+  }
+  &__list {
+    display: flex;
+  }
+  &__elem:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
