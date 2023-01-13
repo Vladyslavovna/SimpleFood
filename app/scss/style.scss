@@ -629,9 +629,6 @@
           background-color: $gray;
           border-radius: 50%;
           transition: box-shadow 0.4s ease, background-color 0.4s ease;
-          @include r(768) {
-            display: none;
-          }
           &:focus {
             box-shadow: 0 0 0 2px #ff6838;
           }
