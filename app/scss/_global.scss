@@ -12,6 +12,7 @@ body {
   font-size: 18px;
   display: flex;
   flex-direction: column;
+  transition: background-color 0.5s ease;
 }
 
 .main {
@@ -38,7 +39,13 @@ body {
 }
 
 .section {
-  padding: 120px 0 0;
+  padding: 60px 0 60px;
+  @include r(992) {
+    padding: 30px 0 30px;
+  }
+  @include r(768) {
+    padding: 20px 0 20px;
+  }
 }
 
 .button {
@@ -73,6 +80,9 @@ body {
 }
 
 .more {
+  @include r(768) {
+    font-size: 16px;
+  }
   position: relative;
   &::after {
     content: "";
@@ -112,45 +122,22 @@ body {
   }
 }
 
-.search {
-  display: inline-block;
-  padding: 12px 32px;
-  margin-right: 35px;
-  background-color: $orange-900;
-  color: $white;
-  border-radius: 6px;
-  line-height: 1.3;
-  letter-spacing: 0.03em;
-  cursor: pointer;
-  transition: box-shadow 0.5s ease-in, background-color 0.5s ease-in,
-    color 0.5s ease-in;
-  &:focus {
-    box-shadow: 0 0 0 2px $peach-shadow;
-    background-color: $light-peach;
-    color: $orange-900;
-  }
-  &:hover {
-    background-color: $white;
-    box-shadow: 0 5px 12px rgba(255, 104, 56, 0.2), 0 0 0 2px $peach-shadow;
-    color: $orange-900;
-  }
-  &:active {
-    background-color: $light-peach;
-    color: $orange-900;
-  }
-}
-
 .title {
   display: block;
   font-weight: 600;
   font-size: 36px;
   line-height: 1.3;
   color: $title;
+  @include r(992) {
+    font-style: 30px;
+  }
+  @include r(768) {
+    font-size: 24px;
+  }
 }
 
 .descr {
   font-size: 20px;
   line-height: 1.5;
+  opacity: 0.9;
 }
-
-
