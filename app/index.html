@@ -18,39 +18,41 @@
 <body>
 
 	<header class="header">
-		<div class="burger__menu">
-			<ul class="burger__menu-top">
-				<li class="burger__menu-elem">
+		<div class="burger-menu">
+			<ul class="burger-menu--top">
+				<li class="burger-menu--elem">
 					<a class="logo" href="#">
 						<img class="logo__img" src="images/header/logo.svg" alt="Логотип Simple Food" width="200"
 							height="39">
 					</a>
 				</li>
-				<li class="burger__menu-elem">
-					<button class="burger__menu-btn">
+				<li class="burger-menu--elem">
+					<button class="burger-menu--btn">
 						<span class="burger__lines"></span>
 						<span class="sr-only">Закрыть меню</span>
 					</button>
 				</li>
 			</ul>
 			<div class="footer__line"></div>
-			<ul class="menu__list">
-				<li class="menu__item menu__item--color">
-					<a class="menu__link animated-links" href="#">
-						Главная
-					</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link animated-links" href="#">
-						Блюда
-					</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link animated-links" href="#">
-						Контакты
-					</a>
-				</li>
-			</ul>
+			<nav class="menu">
+				<ul class="menu__list">
+					<li class="menu__item menu__item--color">
+						<a class="menu__link animated-links" href="#">
+							Главная
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link animated-links" href="#">
+							Блюда
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link animated-links" href="#">
+							Контакты
+						</a>
+					</li>
+				</ul>
+			</nav>
 			<div class="footer__line"></div>
 			<address class="address">
 				<ul class="address__list">
@@ -84,10 +86,10 @@
 
 				</ul>
 
-				<ul class="address__social">
+				<ul class="address__social ">
 					<li class="address__elem">
-						<span class="sr-only">Иконка фейсбука</span>
-						<a class="address__reference " href="#">
+						<span class="sr-only">Написать нам в фейсбук</span>
+						<a class="address__reference" href="#">
 							<svg class=" address__icon address__icon--facebook icon">
 								<use xlink:href="images/sprite.svg#icon-facebook"></use>
 							</svg>
@@ -95,7 +97,7 @@
 					</li>
 
 					<li class="address__elem">
-						<span class="sr-only">Иконка твитерра</span>
+						<span class="sr-only">Написать нам в твиттер</span>
 						<a class="address__reference" href="#">
 							<svg class=" address__icon address__icon--twitter icon">
 								<use xlink:href="images/sprite.svg#icon-twitter"></use>
@@ -104,7 +106,7 @@
 					</li>
 
 					<li class="address__elem">
-						<span class="sr-only">Иконка инстаграма</span>
+						<span class="sr-only">Написать нам в инстаграм</span>
 						<a class="address__reference" href="#">
 							<svg class="address__icon address__icon--instagram icon">
 								<use xlink:href="images/sprite.svg#icon-instagram"></use>
@@ -206,7 +208,7 @@
 				<ul class="popular__list">
 
 					<li class="popular__item">
-						<button class="popular__button popular__button--btn" data-filter="all">
+						<button class="popular__button" data-filter="all">
 							<svg class="popular__icon popular__icon--elem icon">
 								<use xlink:href="images/sprite.svg#icon-burger"></use>
 							</svg>
@@ -385,7 +387,7 @@
 			</div>
 		</section>
 
-<section class="features section">
+		<section class="features section">
 			<div class="container">
 				<div class="features__wrap">
 					<div class="features__image" style="background-image: url(images/features/food-delivery.png);">
@@ -610,7 +612,7 @@
 						<li class="reviews__card">
 							<div class="reviews__elem">
 								<img class="reviews__image" src="images/reviews/reviews-bg.png"
-									alt="Фото заказчика">
+									alt="Фото заказчика" width="300" height="300">
 								<figure class="reviews__inner">
 									<blockquote class="reviews__blockquote">SimpleFood - одна из лучших служб
 										доставки
@@ -629,7 +631,7 @@
 						<li class="reviews__card">
 							<div class="reviews__elem">
 								<img class="reviews__image" src="images/reviews/reviews-bg.png"
-									alt="Фото заказчика">
+									alt="Фото заказчика" width="300" height="300">
 								<figure class="reviews__inner">
 									<blockquote class="reviews__blockquote">SimpleFood - одна из лучших служб
 										доставки
@@ -648,7 +650,7 @@
 						<li class="reviews__card">
 							<div class="reviews__elem">
 								<img class="reviews__image" src="images/reviews/reviews-bg.png"
-									alt="Фото заказчика">
+									alt="Фото заказчика" width="300" height="300">
 								<figure class="reviews__inner">
 									<blockquote class="reviews__blockquote">SimpleFood - одна из лучших служб
 										доставки
@@ -667,7 +669,7 @@
 						<li class="reviews__card">
 							<div class="reviews__elem">
 								<img class="reviews__image" src="images/reviews/reviews-bg.png"
-									alt="Фото заказчика">
+									alt="Фото заказчика" width="300" height="300">
 								<figure class="reviews__inner">
 									<blockquote class="reviews__blockquote">SimpleFood - одна из лучших служб
 										доставки
@@ -686,7 +688,7 @@
 						<li class="reviews__card">
 							<div class="reviews__elem">
 								<img class="reviews__image" src="images/reviews/reviews-bg.png"
-									alt="Фото заказчика">
+									alt="Фото заказчика" width="300" height="300">
 								<figure class="reviews__inner">
 									<blockquote class="reviews__blockquote">SimpleFood - одна из лучших служб
 										доставки
@@ -710,7 +712,7 @@
 		</section>
 
 
-		 <section class="app section">
+		<section class="app section">
 			<div class="container">
 				<div class="app__wrap">
 					<div class="app__about">
@@ -726,13 +728,13 @@
 							<li class="app__elem">
 								<a class="app__link" href="#">
 									<img class="app__icon" src="images/app/icon-apple.svg"
-										alt="Иконка ссылки на Apple">
+										alt="Иконка ссылки на Apple" width="120" height="40">
 								</a>
 							</li>
 							<li class="app__elem">
 								<a class="app__link" href="#">
 									<img class="app__icon" src="images/app/icon-google.svg"
-										alt="Иконка ссылки на Google">
+										alt="Иконка ссылки на Google" width="135" height="40">
 								</a>
 							</li>
 						</ul>
@@ -740,11 +742,11 @@
 					</div>
 					<span class="sr-only">Фоновое изображение с салатом и логотипом</span>
 					<div class="app__image"
-						style="background-image: url(images/app/appbg.jpg); width: 570; height: 380;">
+						style="background-image: url(images/app/appbg.jpg);">
 					</div>
 				</div>
 			</div>
-		</section> 
+		</section>
 
 
 
@@ -858,7 +860,7 @@
 				</ul>
 
 				<address class="address">
-					<ul class="address__list">
+					<ul class="address__list  address__list--footer">
 
 						<li class="address__item">
 							<svg class="address__marks icon">
@@ -889,9 +891,9 @@
 
 					</ul>
 
-					<ul class="address__social">
+					<ul class="address__social address__social--footer">
 						<li class="address__elem">
-							<span class="sr-only">Иконка фейсбука</span>
+							<span class="sr-only">Написать нам в фейсбук</span>
 							<a class="address__reference " href="#">
 								<svg class=" address__icon address__icon--facebook icon">
 									<use xlink:href="images/sprite.svg#icon-facebook"></use>
@@ -900,7 +902,7 @@
 						</li>
 
 						<li class="address__elem">
-							<span class="sr-only">Иконка твитерра</span>
+							<span class="sr-only">Написать нам в твиттер</span>
 							<a class="address__reference" href="#">
 								<svg class=" address__icon address__icon--twitter icon">
 									<use xlink:href="images/sprite.svg#icon-twitter"></use>
@@ -909,7 +911,7 @@
 						</li>
 
 						<li class="address__elem">
-							<span class="sr-only">Иконка инстаграма</span>
+							<span class="sr-only">Написать нам в инстаграм</span>
 							<a class="address__reference" href="#">
 								<svg class="address__icon address__icon--instagram icon">
 									<use xlink:href="images/sprite.svg#icon-instagram"></use>
@@ -929,7 +931,7 @@
 			</div>
 		</div>
 
-	</footer> 
+	</footer>
 
 	<script src="js/main.min.js"></script>
 </body>

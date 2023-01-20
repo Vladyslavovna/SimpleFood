@@ -3,15 +3,16 @@ $gray: #c2c2c2;
 $title: #363853;
 $orange-900: #ff6838;
 $peach: #fff2ed;
-$peach-border:#FFAE94;
-$light-peach:rgba(255, 122, 80, 0.1);
-$peach-shadow:rgba(255, 104, 56, 0.7);
+$peach-border: #ffae94;
+$light-peach: rgba(255, 122, 80, 0.1);
+$peach-shadow: rgba(255, 104, 56, 0.7);
+$peach-bg: #faeded;
 $darkBlue-900: #363853;
 $silver-200: #ececec;
 $silver-100: #f9faff;
 $white: #fff;
-$blue:#00AAFF;
-$red:#FF2222;
+$blue: #00aaff;
+$red: #ff2222;
 
 %background-image {
   background-size: cover;
@@ -19,3 +20,17 @@ $red:#FF2222;
   background-position: center;
 }
 
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+$breakpoints: (
+  "phone": 560px,
+  "tablet": 768px,
+  "tablet-2": 992px,
+  "desktop": 1230px,
+);

@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "browsersync": "^0.0.1-security",
     "del": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -18,12 +20,11 @@
     "gulp-sass": "^5.1.0",
     "gulp-svg-sprite": "^2.0.1",
     "gulp-uglify": "^3.0.2",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.2",
+    "jquery-form-styler": "^2.0.2",
     "mixitup": "^3.3.1",
     "sass": "^1.57.0",
     "slick-carousel": "^1.8.1"
-  },
-  "dependencies": {
-    "browser-sync": "^2.27.11"
   }
 }
