@@ -56,21 +56,6 @@
   }
 }
 
-.lock {
-  overflow: hidden;
-  position: relative;
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
-
 .menu {
   display: flex;
   align-items: center;
@@ -203,7 +188,7 @@
   height: 100vh;
   overflow-y: auto;
   transition: 0.5s;
-  &-active {
+  &.active {
     transform: translateX(0%);
   }
   &--top {
@@ -233,18 +218,18 @@
       transform: rotate(-45deg);
     }
   }
-  &-active .menu__list {
+  &.active .menu__list {
     display: flex;
     flex-direction: column;
     padding: 25px 15px;
   }
-  &-active .menu__item {
+  &.active .menu__item {
     margin-right: 0;
     &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
-  &-active .address {
+  &.active .address {
     padding: 15px;
   }
 }
@@ -630,12 +615,12 @@
   }
   &__item {
     max-width: 370px;
-    width: 100%;
+    width: 95%;
     margin-right: 30px;
     margin-bottom: 30px;
     @include r(768) {
       margin-right: 0;
-      max-width: 100%;
+      max-width: 95%;
       padding: 0 50px;
     }
     @include r(576) {
@@ -691,11 +676,58 @@
     }
   }
 }
-
 .promo {
   padding-bottom: 120px;
+  @include r(992) {
+    padding-bottom: 90px;
+  }
+  @include r(768) {
+    padding-bottom: 40px;
+  }
   &__title {
     margin-bottom: 60px;
+    @include r(992) {
+      text-align: center;
+      @include r(768) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .slick {
+    &-dots {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      li {
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+        button {
+          padding: 0;
+          font-size: 0;
+          width: 15px;
+          height: 15px;
+          background-color: $gray;
+          border-radius: 50%;
+          transition: box-shadow 0.4s ease, background-color 0.4s ease;
+          &:focus {
+            box-shadow: 0 0 0 2px #ff6838;
+          }
+          &:hover {
+            background: #fff2ed;
+            box-shadow: 0 0 0 2px $peach-shadow;
+          }
+          &:active {
+            background: #ffae94;
+          }
+        }
+        &.slick-active {
+          button {
+            background-color: $orange-900;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -711,6 +743,12 @@
   }
   &__image {
     border-radius: 10px 10px 0 0;
+    &--item {
+      @include r(992) {
+        width: 90%;
+        object-fit: cover;
+      }
+    }
     @include r(768) {
       width: 100%;
       object-fit: cover;
@@ -723,6 +761,7 @@
     &--description {
       font-size: 24px;
       line-height: 1.3;
+      @include line-clamp(3);
     }
   }
   &__title {
@@ -886,6 +925,80 @@
     font-size: 14px;
     line-height: 1.3;
   }
+  &-arrow__next,
+  &-arrow__prev {
+    border: 3px solid $gray;
+    border-radius: 50%;
+    width: 36px;
+    height: 34px;
+    position: absolute;
+    bottom: 0;
+    transition: box-shadow 0.5s ease, background-color 0.5s ease,
+      border 0.5s ease-in-out, box-shadow 0.4s ease;
+    z-index: 3;
+    &.slick-disabled {
+      border: 3px solid $orange-900;
+    }
+    &.slick-disabled .reviews-arrow__right {
+      fill: $orange-900;
+      stroke: $orange-900;
+    }
+    &:focus {
+      box-shadow: 0 0 0 3px $orange-900;
+    }
+    &:hover {
+      background-color: $light-peach;
+      border: 3px solid $peach-border;
+    }
+    &:active {
+      border: 3px solid transparent;
+      background-color: $peach;
+    }
+    &:hover .reviews-arrow__right {
+      fill: $peach-border;
+      stroke: $peach-border;
+    }
+    &:active {
+      background-color: $peach;
+    }
+    &:active .reviews-arrow__right {
+      fill: $orange-900;
+      stroke: $orange-900;
+    }
+  }
+  &-arrow {
+    &__right {
+      width: 19px;
+      height: 17px;
+      fill: $gray;
+      stroke: $gray;
+    }
+    &__prev {
+      left: 39%;
+      bottom: -8px;
+      padding: 4px 3px;
+      @include r(992) {
+        left: 34%;
+      }
+      @include r(768) {
+        top: 10%;
+        left: 65px;
+      }
+    }
+    &__next {
+      right: 39%;
+      bottom: -9px;
+      padding: 4px 3px;
+      transform: rotate(180deg);
+      @include r(992) {
+        right: 34%;
+      }
+      @include r(768) {
+        top: 10%;
+        margin-right: -50px;
+      }
+    }
+  }
   .slick {
     &-initialized .slick-slide {
       display: flex;
@@ -894,76 +1007,7 @@
         flex-direction: column;
       }
     }
-    &-arrow {
-      border: 3px solid $gray;
-      border-radius: 50%;
-      width: 34px;
-      height: 34px;
-      position: absolute;
-      bottom: 0;
-      transition: box-shadow 0.5s ease, background-color 0.5s ease,
-        border 0.5s ease-in-out, box-shadow 0.4s ease;
-      z-index: 3;
-      &__right {
-        width: 19px;
-        height: 11px;
-        fill: $gray;
-        stroke: $gray;
-      }
-      &__prev {
-        left: 37%;
-        bottom: -8px;
-        @include r(992) {
-          left: 34%;
-        }
-        @include r(768) {
-          margin-left: 50px;
-          top: 10%;
-          left: 0;
-        }
-      }
-      &__next {
-        right: 37%;
-        bottom: -9px;
-        transform: rotate(180deg);
-        @include r(992) {
-          right: 34%;
-        }
-        @include r(768) {
-          top: 10%;
-          margin-right: -50px;
-        }
-      }
-      &:focus {
-        box-shadow: 0 0 0 3px $orange-900;
-      }
-      &:hover {
-        background-color: $light-peach;
-        border: 3px solid $peach-border;
-      }
-      &:active {
-        border: 3px solid transparent;
-        background-color: $peach;
-      }
-      &:hover .slick-arrow__right {
-        fill: $peach-border;
-        stroke: $peach-border;
-      }
-      &:active {
-        background-color: $peach;
-      }
-      &:active .slick-arrow__right {
-        fill: $orange-900;
-        stroke: $orange-900;
-      }
-      &.slick-disabled {
-        border: 3px solid $orange-900;
-      }
-      &.slick-disabled .slick-arrow__right {
-        fill: $orange-900;
-        stroke: $orange-900;
-      }
-    }
+
     &-dots {
       display: flex;
       justify-content: center;
@@ -1269,19 +1313,49 @@
 
 .shop {
   padding: 60px 0 120px;
+  @include r(768) {
+    padding: 40px 0 40px;
+  }
   &__top {
     margin-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include r(992) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 45px;
+    }
+    @include r(768) {
+      margin-bottom: 30px;
+    }
+  }
+  &-filters {
+    @include r(992) {
+      display: none;
+    }
+  }
+  &__title {
+    @include r(992) {
+      margin-bottom: 20px;
+    }
   }
   &__inner {
     display: flex;
+    @include r(768) {
+      display: block;
+    }
   }
   &-content {
     &__catalog {
       margin-right: -10px;
       margin-bottom: 60px;
+      @include r(992) {
+        margin-bottom: 45px;
+      }
+      @include r(768) {
+        margin-bottom: 30px;
+      }
     }
     &__item {
       margin-right: 10px;
@@ -1289,7 +1363,7 @@
   }
   .jq-selectbox__select {
     height: 47px;
-    padding: 15px 47px 15px 15px;
+    padding: 15px;
     background: $white;
     font: inherit;
     font-size: 14px;
@@ -1318,8 +1392,8 @@
   }
   .jq-selectbox__trigger-arrow {
     position: absolute;
-    top: 17px;
-    right: 0;
+    top: 19px;
+    right: -3px;
     width: 31px;
     height: 11px;
     border: none;
@@ -1356,6 +1430,39 @@
   .jq-select-multiple li.selected {
     background: $peach;
     color: #fff;
+  }
+  &-filter {
+    @include r(992) {
+      display: flex;
+    }
+    &__sort {
+      width: 149px;
+    }
+    &__show {
+      width: 92px;
+    }
+    &__btn {
+      display: none;
+      width: 47px;
+      height: 47px;
+      border-radius: 3px;
+      background-color: $peach-bg;
+      padding: 6px 8px;
+      @include r(992) {
+        display: block;
+        margin-right: 10px;
+      }
+    }
+    &__icon {
+      display: none;
+      width: 32px;
+      height: 36px;
+      fill: $orange-900;
+      stroke: transparent;
+      @include r(992) {
+        display: block;
+      }
+    }
   }
 }
 
@@ -1444,13 +1551,14 @@
       }
     }
     &__checkbox {
+      display: block;
       width: 24px;
       height: 24px;
       border: 1px solid $silver-200;
       border-radius: 3px;
       background-color: $peach-bg;
       position: absolute;
-      left: 12.5%;
+      left: 12px;
       transition: border 0.4s ease;
       &:hover {
         border: 1px solid $orange-900;
@@ -1556,6 +1664,11 @@
     padding: 15px 0px;
     width: 48px;
     height: 48px;
+    &--elem {
+      @include r(576) {
+        display: none;
+      }
+    }
     &--animation {
       transition: background-color 0.5s ease-in-out, box-shadow 0.4s ease-in-out,
         color 0.4s ease;
@@ -1569,6 +1682,49 @@
       &:active {
         box-shadow: inset 0 -1px 4px 2px rgba(0, 0, 0, 0.15);
       }
+    }
+  }
+}
+
+.mobile-menu {
+  max-width: 320px;
+  width: 100%;
+  background-color: $white;
+  transform: translateX(-100%);
+  position: absolute;
+  z-index: 3;
+  height: 100vh;
+  overflow-y: auto;
+  transition: 0.5s;
+  z-index: 13;
+  &.active {
+    transform: translateX(0%);
+  }
+  &__top {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+  &__btn {
+    width: 44px;
+    height: 44px;
+    background-color: $peach;
+    border-radius: 3px;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 11px;
+      width: 50%;
+      height: 2px;
+      background-color: currentColor;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
     }
   }
 }
