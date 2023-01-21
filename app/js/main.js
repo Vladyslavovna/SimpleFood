@@ -120,6 +120,12 @@ $(".mobile-menu__btn, .burger-menu").on("click", function () {
   $("body").removeClass("lock");
 });
 
-
+$(document).mouseup(function (e) {
+  const div = $("burger-menu, .mobile-menu");
+  if (!div.is(e.targer) && div.has(e.target).length === 0) {
+    $(".burger-menu, .mobile-menu").removeClass("active");
+    $("body").removeClass("lock");
+  }
+});
 
 var mixer = mixitup(".popular__catalog");
