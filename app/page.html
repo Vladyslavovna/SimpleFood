@@ -18,102 +18,118 @@
 <body>
 
 	<header class="header">
-		<div class="burger-menu">
-			<ul class="burger-menu--top">
-				<li class="burger-menu--elem">
-					<a class="logo" href="#">
-						<img class="logo__img" src="images/header/logo.svg" alt="Логотип Simple Food" width="200"
-							height="39">
-					</a>
-				</li>
-				<li class="burger-menu--elem">
-					<button class="burger-menu--btn">
-						<span class="sr-only">Закрыть меню</span>
-					</button>
-				</li>
-			</ul>
-			<div class="decorative-line"></div>
-			<nav class="menu">
-				<ul class="menu__list">
-					<li class="menu__item ">
-						<a class="menu__link animated-links" href="#">
-							Главная
-						</a>
+		<div class="mobile-menu">
+			<div class="mobile-menu__top">
+				<button class="mobile-menu__btn">
+					<span class="sr-only">Закрыть меню</span>
+				</button>
+			</div>
+			<div class="mobile-menu__inner">
+				<ul class="filter">
+					<li class="filter__item">
+						<div class="filter__block filter-category">
+							<h3 class="filter__title">Категории</h3>
+							<div class="decorative-line filter__line"></div>
+							<form class="filter-category__form" action="#">
+								<ul class="filter-category__list">
+
+									<li class="filter-category__elem">
+										<a class="filter-category__link filter-category__link--elem  animated-links"
+											href="#">Бургеры</a>
+									</li>
+									<li class="filter-category__elem">
+										<a class="filter-category__link  animated-links" href="#">Пицца</a>
+									</li>
+									<li class="filter-category__elem">
+										<a class="filter-category__link  animated-links" href="#">Сендвичи</a>
+									</li>
+									<li class="filter-category__elem">
+										<a class="filter-category__link  animated-links" href="#">Азиатская
+											кухня</a>
+									</li>
+									<li class="filter-category__elem">
+										<a class="filter-category__link  animated-links" href="#">Сеты</a>
+									</li>
+									<li class="filter-category__elem">
+										<a class="filter-category__link  animated-links" href="#">Европейская
+											кухня</a>
+									</li>
+									<li class="filter-category__elem">
+										<a class="filter-category__link  animated-links" href="#">Напитки</a>
+									</li>
+									<li class="filter-category__elem">
+										<a class="filter-category__link  animated-links" href="#">Алкоголь</a>
+									</li>
+
+								</ul>
+							</form>
+
+						</div>
 					</li>
-					<li class="menu__item menu__item--color">
-						<a class="menu__link animated-links" href="catalog.html">
-							Блюда
-						</a>
+
+					<li class="filter__item">
+						<div class="filter__block filter-offer">
+							<h3 class="filter__title">Предложения</h3>
+							<div class="decorative-line filter__line"></div>
+							<ul class="filter-offer__list">
+								<li class="filter-offer__elem">
+									<form class="filter-offer__form" action="#">
+										<label class="filter-offer__label">
+											<input class="filter-offer__input" type="checkbox">
+											<span class="filter-offer__checkbox"></span>
+											Со скидкой
+										</label>
+									</form>
+								</li>
+								<li class="filter-offer__elem">
+									<form class="filter-offer__form" action="#">
+										<label class="filter-offer__label">
+											<input class="filter-offer__input" type="checkbox">
+											<span class="filter-offer__checkbox"></span>
+											Новинка
+										</label>
+									</form>
+								</li>
+								<li class="filter-offer__elem">
+									<form class="filter-offer__form" action="#">
+										<label class="filter-offer__label">
+											<input class="filter-offer__input" type="checkbox">
+											<span class="filter-offer__checkbox"></span>
+											Хит
+										</label>
+									</form>
+								</li>
+							</ul>
+						</div>
 					</li>
-					<li class="menu__item">
-						<a class="menu__link animated-links" href="#">
-							Контакты
-						</a>
+
+					<li class="filter__item">
+						<div class="filter__block filter-price">
+							<h3 class="filter__title">Цена</h3>
+							<div class="decorative-line filter__line"></div>
+							<form class="filter-price__inputs" action="#">
+								<label class="filter-price__label">
+									<span class="filter-price__text">от</span>
+									<input type="text" class="filter-price__from" value="0" />
+									<span class="filter-price__text">₴</span>
+								</label>
+								<label class="filter-price__label">
+									<span class="filter-price__text">до</span>
+									<input type="text" class="filter-price__to filter-price__to--elem"
+										value="0" />
+									<span class="filter-price__text">₴</span>
+								</label>
+							</form>
+							<form class="filter-price__form" action="#">
+								<input class="filter-price__range" type="text" name="my_range" value=""
+									data-type="double" data-min="0" data-max="1200" data-from="100"
+									data-to="1000" />
+							</form>
+						</div>
 					</li>
+
 				</ul>
-			</nav>
-			<div class="decorative-line"></div>
-			<address class="address">
-				<ul class="address__list">
-
-					<li class="address__item">
-						<svg class="address__marks icon">
-							<use xlink:href="images/sprite.svg#icon-location"></use>
-						</svg>
-						<a class="address__link animated-links" href="#" target="_blank">
-							ул. Т.Г.Шевченко, 1
-						</a>
-					</li>
-
-					<li class="address__item">
-						<svg class="address__marks icon">
-							<use xlink:href="images/sprite.svg#icon-call"></use>
-						</svg>
-						<a class="address__link animated-links" href="tel:+380501112233">
-							380501112233
-						</a>
-					</li>
-
-					<li class="address__item">
-						<svg class="address__marks icon">
-							<use xlink:href="images/sprite.svg#icon-message"></use>
-						</svg>
-						<a class="address__link animated-links" href="mailto:support@sfood.com">
-							support@sfood.com
-						</a>
-					</li>
-
-				</ul>
-
-				<ul class="address__social ">
-					<li class="address__elem">
-						<span class="sr-only">Написать нам в фейсбук</span>
-						<a class="address__reference" href="#">
-							<svg class=" address__icon address__icon--facebook icon">
-								<use xlink:href="images/sprite.svg#icon-facebook"></use>
-							</svg>
-						</a>
-					</li>
-
-					<li class="address__elem">
-						<span class="sr-only">Написать нам в твиттер</span>
-						<a class="address__reference" href="#">
-							<svg class=" address__icon address__icon--twitter icon">
-								<use xlink:href="images/sprite.svg#icon-twitter"></use>
-							</svg>
-						</a>
-					</li>
-
-					<li class="address__elem">
-						<span class="sr-only">Написать нам в инстаграм</span>
-						<a class="address__reference" href="#">
-							<svg class="address__icon address__icon--instagram icon">
-								<use xlink:href="images/sprite.svg#icon-instagram"></use>
-							</svg>
-						</a>
-					</li>
-				</ul>
-			</address>
+			</div>
 		</div>
 		<div class="container">
 			<div class="header__wrap">
@@ -192,126 +208,6 @@
 		</section>
 
 		<section class="shop">
-			<div class="mobile-menu">
-				<div class="mobile-menu__top">
-					<button class="mobile-menu__btn">
-						<span class="sr-only">Закрыть меню</span>
-					</button>
-				</div>
-				<div class="mobile-menu__inner">
-					<ul class="filter">
-						<li class="filter__item">
-							<div class="filter__block filter-category">
-								<h3 class="filter__title">Категории</h3>
-								<div class="decorative-line filter__line"></div>
-								<form class="filter-category__form" action="#">
-									<ul class="filter-category__list">
-
-										<li class="filter-category__elem">
-											<a class="filter-category__link filter-category__link--elem  animated-links"
-												href="#">Бургеры</a>
-										</li>
-										<li class="filter-category__elem">
-											<a class="filter-category__link  animated-links"
-												href="#">Пицца</a>
-										</li>
-										<li class="filter-category__elem">
-											<a class="filter-category__link  animated-links"
-												href="#">Сендвичи</a>
-										</li>
-										<li class="filter-category__elem">
-											<a class="filter-category__link  animated-links"
-												href="#">Азиатская
-												кухня</a>
-										</li>
-										<li class="filter-category__elem">
-											<a class="filter-category__link  animated-links"
-												href="#">Сеты</a>
-										</li>
-										<li class="filter-category__elem">
-											<a class="filter-category__link  animated-links"
-												href="#">Европейская
-												кухня</a>
-										</li>
-										<li class="filter-category__elem">
-											<a class="filter-category__link  animated-links"
-												href="#">Напитки</a>
-										</li>
-										<li class="filter-category__elem">
-											<a class="filter-category__link  animated-links"
-												href="#">Алкоголь</a>
-										</li>
-
-									</ul>
-								</form>
-
-							</div>
-						</li>
-
-						<li class="filter__item">
-							<div class="filter__block filter-offer">
-								<h3 class="filter__title">Предложения</h3>
-								<div class="decorative-line filter__line"></div>
-								<ul class="filter-offer__list">
-									<li class="filter-offer__elem">
-										<form class="filter-offer__form" action="#">
-											<label class="filter-offer__label">
-												<input class="filter-offer__input" type="checkbox">
-												<span class="filter-offer__checkbox"></span>
-												Со скидкой
-											</label>
-										</form>
-									</li>
-									<li class="filter-offer__elem">
-										<form class="filter-offer__form" action="#">
-											<label class="filter-offer__label">
-												<input class="filter-offer__input" type="checkbox">
-												<span class="filter-offer__checkbox"></span>
-												Новинка
-											</label>
-										</form>
-									</li>
-									<li class="filter-offer__elem">
-										<form class="filter-offer__form" action="#">
-											<label class="filter-offer__label">
-												<input class="filter-offer__input" type="checkbox">
-												<span class="filter-offer__checkbox"></span>
-												Хит
-											</label>
-										</form>
-									</li>
-								</ul>
-							</div>
-						</li>
-
-						<li class="filter__item">
-							<div class="filter__block filter-price">
-								<h3 class="filter__title">Цена</h3>
-								<div class="decorative-line filter__line"></div>
-								<form class="filter-price__inputs" action="#">
-									<label class="filter-price__label">
-										<span class="filter-price__text">от</span>
-										<input type="text" class="filter-price__from" value="0" />
-										<span class="filter-price__text">₴</span>
-									</label>
-									<label class="filter-price__label">
-										<span class="filter-price__text">до</span>
-										<input type="text" class="filter-price__to filter-price__to--elem"
-											value="0" />
-										<span class="filter-price__text">₴</span>
-									</label>
-								</form>
-								<form class="filter-price__form" action="#">
-									<input class="filter-price__range" type="text" name="my_range" value=""
-										data-type="double" data-min="0" data-max="1200" data-from="100"
-										data-to="1000" />
-								</form>
-							</div>
-						</li>
-
-					</ul>
-				</div>
-			</div>
 			<div class="container">
 				<div class="shop__top">
 					<h2 class="shop__title title">Каталог продуктов</h2>
@@ -613,8 +509,7 @@
 									</a>
 								</li>
 								<li class="pagination__item">
-									<a class="pagination__link pagination__link--animation pagination__link--active"
-										href="#">
+									<a class="pagination__link pagination__link--animation" href="#">
 										1
 									</a>
 								</li>
@@ -625,9 +520,9 @@
 									</a>
 								</li>
 								<li class="pagination__item">
-									<span class="pagination__link">
+									<a class="pagination__link pagination__link--animation" href="#">
 										...
-									</span>
+									</a>
 								</li>
 								<li class="pagination__item">
 									<a class="pagination__link pagination__link--animation pagination__link--elem"
