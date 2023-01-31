@@ -139,6 +139,14 @@ $(".product-item__slider").slick({
 	prevArrow: '<button class="product-item-arrow__prev"><svg class="product-item-arrow__right icon"><use xlink:href="images/sprite.svg#icon-thin-arrow-right"></use></svg></button> ',
 	nextArrow: '<button class="product-item-arrow__next"> <svg class="product-item-arrow__right icon"><use xlink:href="images/sprite.svg#icon-thin-arrow-right"></use></svg></button>',
 });
+$(".recent__slider").slick({
+	arrows: true,
+	slidesToShow:5,
+	prevArrow:
+	'<button class="reviews-arrow__prev recent-arrow__prev"><svg class="reviews-arrow__right icon"><use xlink:href="images/sprite.svg#icon-left"></use></svg></button> ',
+   nextArrow:
+	'<button class="reviews-arrow__next recent-arrow__next"> <svg class="reviews-arrow__right icon"><use xlink:href="images/sprite.svg#icon-left"></use></svg></button>',
+});
 
 
 

@@ -21,13 +21,12 @@ body {
 
 .lock {
   overflow: hidden;
-  position: relative;
   &::after {
     content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
     bottom: 0;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.5);
@@ -165,6 +164,28 @@ body {
 .decorative-line {
   height: 1px;
   width: 100%;
-  background-color: $gray;
+  background-color: $dark-gray;
   opacity: 0.2;
+}
+
+.form-animation{
+	border: 1px solid $gray;
+	border-radius: 5px;
+	padding: 10px 15px;
+	transition: box-shadow 0.5s ease-in-out;
+ 
+	&:focus {
+	  box-shadow: 0 0 0 2px $orange-900;
+	}
+ 
+	&::placeholder {
+	  color: $gray;
+	  font-size: 14px;
+	  line-height: 1.3;
+	  transition: color 0.5s ease;
+	}
+ 
+	&:hover::placeholder {
+	  color: $dark;
+	}
 }

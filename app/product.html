@@ -244,7 +244,7 @@
 							<div class=" product-item__content modal-content swiper">
 								<div class="modal-header">
 									<span class="modal-close">&times;</span>
-									<h2>Шапка модального окна</h2>
+									
 								</div>
 								<div class="modal-slider swiper-wrapper">
 
@@ -484,7 +484,7 @@
 								</h3>
 							</div>
 							<div class="tab__grade">
-								<label class="tab__label">Ваша оценка *</label>
+								<label class="tab__label" required="required">Ваша оценка *</label>
 								<div class="tab__grade-rate"></div>
 							</div>
 
@@ -492,24 +492,33 @@
 								<div class="tab__textarea">
 									<label class="tab__label tab__label--text" for="message">Ваша отзыв
 										*</label>
-									<textarea class="tab__textfield" name="message" id="message"
+									<textarea class="tab__textfield form-animation" name="message" required="required" id="message"
 										placeholder="Введите текст отзыва"></textarea>
 								</div>
 
 								<div class="tab__inputs">
 									<div class="tab__name">
 										<label class="tab__label tab__label--text" for="name">Имя</label>
-										<input class="tab__input" type="text" required="required" name="name"
+										<input class="tab__input form-animation" type="text"  name="name"
 											id="name" placeholder="Введите ваше имя">
 									</div>
 
 									<div class="tab__name">
-										<label class="tab__label tab__label--text" for="name">Имя</label>
-										<input class="tab__input" type="text" required="required" name="name"
-											id="name1" placeholder="Введите ваше имя">
+										<label class="tab__label tab__label--text" for="name">E-mail *</label>
+										<input class="tab__input form-animation" type="text" required="required" name="name"
+											id="name1" placeholder="youremail@mail.com">
 									</div>
 								</div>
-
+								<div class="tab__send">
+									<label class="filter-offer__label tab__checkbox">
+										<input class="filter-offer__input tab__checkbox" type="checkbox">
+										<span class="filter-offer__checkbox tab__box"></span>
+										<span class="tab__paragraph">Сохранить моё имя, email и адрес сайта в
+											этом браузере для последующих
+											моих комментариев.</span>
+									</label>
+								</div>
+								<button class="tab__button button" type="submit">Оставить отзыв</button>
 							</form>
 
 						</div>
@@ -524,6 +533,134 @@
 			</div>
 		</section>
 
+
+		<section class="recent">
+<div class="container">
+	<h3 class="recent__title title">Вас может заинтересовать</h3>
+	<ul class="popular__catalog recent__slider">
+
+		<li class="popular__catalog-item recent__item">
+			<article class="product-card">
+				<a class="product-card__link" href="#">
+					<img src="images/card/beefburger.svg" alt="Картинка бифбургера" width="140"
+						height="140">
+				</a>
+				<h3 class="product-card__title">Бифбургер</h3>
+				<span class="product-card__price">190 грн</span>
+				<button class="product-card__btn button" type="button">В корзину</button>
+			</article>
+		</li>
+
+		<li class="popular__catalog-item recent__item ">
+			<article class="product-card">
+				<a class="product-card__link" href="#">
+					<img src="images/card/royalcheese.svg" alt="Картинка королевского чизбургера"
+						width="140" height="140">
+				</a>
+				<h3 class="product-card__title">Королевский чизбургер</h3>
+				<span class="product-card__price">260 грн</span>
+				<button class="product-card__btn button" type="button">В корзину</button>
+			</article>
+		</li>
+
+		<li class="popular__catalog-item recent__item ">
+			<article class="product-card">
+				<a class="product-card__link" href="#">
+					<img src="images/card/blackcburg.svg" alt="Картинка черного гамбургера"
+						width="140" height="140">
+				</a>
+				<h3 class="product-card__title">Черный гамбургер</h3>
+				<span class="product-card__price">199 грн</span>
+				<button class="product-card__btn button" type="button">В корзину</button>
+			</article>
+		</li>
+
+		<li class="popular__catalog-item recent__item ">
+			<article class="product-card">
+				<a class="product-card__link" href="#">
+					<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
+						height="140">
+				</a>
+				<h3 class="product-card__title">Чикен бургер</h3>
+				<span class="product-card__price">180 грн</span>
+				<button class="product-card__btn button" type="button">В корзину</button>
+			</article>
+		</li>
+		<li class="popular__catalog-item recent__item ">
+			<article class="product-card">
+				<a class="product-card__link" href="#">
+					<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
+						height="140">
+				</a>
+				<h3 class="product-card__title">Чикен бургер</h3>
+				<span class="product-card__price">180 грн</span>
+				<button class="product-card__btn button" type="button">В корзину</button>
+			</article>
+		</li>
+		<li class="popular__catalog-item recent__item ">
+			<article class="product-card">
+				<a class="product-card__link" href="#">
+					<img src="images/card/beefburger.svg" alt="Картинка бифбургера" width="140"
+						height="140">
+				</a>
+				<h3 class="product-card__title">Бифбургер</h3>
+				<span class="product-card__price">190 грн</span>
+				<button class="product-card__btn button" type="button">В корзину</button>
+			</article>
+		</li>
+
+		<li class="popular__catalog-item recent__item ">
+			<article class="product-card">
+				<a class="product-card__link" href="#">
+					<img src="images/card/royalcheese.svg" alt="Картинка королевского чизбургера"
+						width="140" height="140">
+				</a>
+				<h3 class="product-card__title">Королевский чизбургер</h3>
+				<span class="product-card__price">260 грн</span>
+				<button class="product-card__btn button" type="button">В корзину</button>
+			</article>
+		</li>
+
+		<li class="popular__catalog-item recent__item ">
+			<article class="product-card">
+				<a class="product-card__link" href="#">
+					<img src="images/card/blackcburg.svg" alt="Картинка черного гамбургера"
+						width="140" height="140">
+				</a>
+				<h3 class="product-card__title">Черный гамбургер</h3>
+				<span class="product-card__price">199 грн</span>
+				<button class="product-card__btn button" type="button">В корзину</button>
+			</article>
+		</li>
+
+		<li class="popular__catalog-item recent__item ">
+			<article class="product-card">
+				<a class="product-card__link" href="#">
+					<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
+						height="140">
+				</a>
+				<h3 class="product-card__title">Чикен бургер</h3>
+				<span class="product-card__price">180 грн</span>
+				<button class="product-card__btn button" type="button">В корзину</button>
+			</article>
+		</li>
+		<li class="popular__catalog-item recent__item ">
+			<article class="product-card">
+				<a class="product-card__link" href="#">
+					<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
+						height="140">
+				</a>
+				<h3 class="product-card__title">Чикен бургер</h3>
+				<span class="product-card__price">180 грн</span>
+				<button class="product-card__btn button" type="button">В корзину</button>
+			</article>
+		</li>
+	</ul>
+</div>
+		</section>
+
+
+
 	</main>
 
 
@@ -536,8 +673,8 @@
 							height="39">
 					</a>
 					<form class="form" action="#">
-						<laber class="sr-only">Email</laber>
-						<input class="form__input" type="text" id="tel" name="email" required="required"
+						<label class="sr-only">Email</label>
+						<input class="form__input form-animation" type="text" id="tel" name="email" required="required"
 							placeholder="Ваш Email">
 						<button class="form__btn button" type="submit">
 							<svg class="form__icon icon">

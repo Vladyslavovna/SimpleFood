@@ -1318,25 +1318,6 @@
   &__input {
     margin-bottom: 13px;
     width: 100%;
-    border: 1px solid $gray;
-    border-radius: 5px;
-    padding: 10px 15px;
-    transition: box-shadow 0.5s ease-in-out;
-
-    &:focus {
-      box-shadow: 0 0 0 2px $orange-900;
-    }
-
-    &::placeholder {
-      color: $gray;
-      font-size: 14px;
-      line-height: 1.3;
-      transition: color 0.5s ease;
-    }
-
-    &:hover::placeholder {
-      color: $dark;
-    }
   }
 
   &__btn {
@@ -1574,198 +1555,186 @@
 }
 
 .shop {
-	padding: 60px 0 120px;
+  padding: 60px 0 120px;
 
-	@include r(768) {
-		padding: 40px 0 40px;
-	}
+  @include r(768) {
+    padding: 40px 0 40px;
+  }
 
-	&__top {
-		margin-bottom: 60px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+  &__top {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-		@include r(992) {
-			flex-direction: column;
-			align-items: flex-start;
-			margin-bottom: 45px;
-		}
+    @include r(992) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 45px;
+    }
 
-		@include r(768) {
-			margin-bottom: 30px;
-		}
-	}
+    @include r(768) {
+      margin-bottom: 30px;
+    }
+  }
 
-	&-filters {
-		@include r(992) {
-			display: none;
-		}
-	}
+  &-filters {
+    @include r(992) {
+      display: none;
+    }
+  }
 
-	&__title {
-		@include r(992) {
-			margin-bottom: 20px;
-		}
-	}
+  &__title {
+    @include r(992) {
+      margin-bottom: 20px;
+    }
+  }
 
-	&__inner {
-		display: flex;
+  &__inner {
+    display: flex;
 
-		@include r(768) {
-			display: block;
-		}
-	}
+    @include r(768) {
+      display: block;
+    }
+  }
 
-	&-content {
-		&__catalog {
-			margin-right: -10px;
-			margin-bottom: 60px;
+  &-content {
+    &__catalog {
+      margin-right: -10px;
+      margin-bottom: 60px;
 
-			@include r(992) {
-				margin-bottom: 45px;
-			}
+      @include r(992) {
+        margin-bottom: 45px;
+      }
 
-			@include r(768) {
-				margin-bottom: 30px;
-			}
-		}
+      @include r(768) {
+        margin-bottom: 30px;
+      }
+    }
 
-		&__item {
-			margin-right: 10px;
-		}
-	}
+    &__item {
+      margin-right: 10px;
+    }
+  }
 
-	.jq-selectbox__select {
-		height: 47px;
-		padding: 15px;
-		background: $white;
-		font: inherit;
-		font-size: 14px;
-		line-height: 1.2;
-		border: 1px solid $gray;
-		box-shadow: none;
-		border-radius: 3px;
-		text-shadow: none;
-		transition: border 0.4s ease, color 0.4s ease;
+  .jq-selectbox__select {
+    height: 47px;
+    padding: 15px;
+    background: $white;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.2;
+    border: 1px solid $gray;
+    box-shadow: none;
+    border-radius: 3px;
+    text-shadow: none;
+    transition: border 0.4s ease, color 0.4s ease;
 
-		&:hover {
-			background: $white;
-			border: 1px solid $orange-900;
-			color: $orange-900;
+    &:hover {
+      background: $white;
+      border: 1px solid $orange-900;
+      color: $orange-900;
 
-			.jq-selectbox__trigger-arrow {
-				filter: invert(51%) sepia(86%) saturate(2337%) hue-rotate(337deg) brightness(102%) contrast(101%);
-			}
-		}
+      .jq-selectbox__trigger-arrow {
+        filter: invert(51%) sepia(86%) saturate(2337%) hue-rotate(337deg)
+          brightness(102%) contrast(101%);
+      }
+    }
 
-		&:focus {
-			border: 1px solid $orange-900;
-		}
+    &:focus {
+      border: 1px solid $orange-900;
+    }
 
-		&:active {
-			background: $white;
-			box-shadow: none;
-		}
-	}
+    &:active {
+      background: $white;
+      box-shadow: none;
+    }
+  }
 
-	.jq-selectbox__trigger-arrow {
-		position: absolute;
-		top: 19px;
-		right: -3px;
-		width: 31px;
-		height: 11px;
-		border: none;
-		background-image: url("../images/sprite.svg#icon-left");
-		filter: invert(90%) sepia(0%) saturate(1632%) hue-rotate(64deg) brightness(89%) contrast(89%);
-		transform: rotate(270deg);
-		background-repeat: no-repeat;
-	}
+  .jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 19px;
+    right: -3px;
+    width: 31px;
+    height: 11px;
+    border: none;
+    background-image: url("../images/sprite.svg#icon-left");
+    filter: invert(90%) sepia(0%) saturate(1632%) hue-rotate(64deg)
+      brightness(89%) contrast(89%);
+    transform: rotate(270deg);
+    background-repeat: no-repeat;
+  }
 
-	.jq-selectbox__trigger {
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		width: 34px;
-		height: 100%;
-		border-left: none;
-	}
+  .jq-selectbox__trigger {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 34px;
+    height: 100%;
+    border-left: none;
+  }
 
-	.jq-selectbox li.selected {
-		font: inherit;
-		font-size: 14px;
-		line-height: 1.2;
-	}
+  .jq-selectbox li.selected {
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.2;
+  }
 
-	.jq-selectbox li:hover {
-		background-color: $orange-900;
-		color: #fff;
-	}
+  .jq-selectbox li:hover {
+    background-color: $orange-900;
+    color: #fff;
+  }
 
-	.jq-selectbox li.selected {
-		background-color: $orange-900;
-		color: #fff;
-	}
+  .jq-selectbox li.selected {
+    background-color: $orange-900;
+    color: #fff;
+  }
 
-	.jq-select-multiple li.selected {
-		background: $peach;
-		color: #fff;
-	}
+  .jq-select-multiple li.selected {
+    background: $peach;
+    color: #fff;
+  }
 
-	&-filter {
-		@include r(992) {
-			display: flex;
-		}
+  &-filter {
+    @include r(992) {
+      display: flex;
+    }
 
-		&__sort {
-			width: 149px;
-		}
+    &__sort {
+      width: 149px;
+    }
 
-		&__show {
-			width: 92px;
-		}
+    &__show {
+      width: 92px;
+    }
 
-		&__btn {
-			display: none;
-			width: 47px;
-			height: 47px;
-			border-radius: 3px;
-			background-color: $peach-bg;
-			padding: 6px 8px;
+    &__btn {
+      display: none;
+      width: 47px;
+      height: 47px;
+      border-radius: 3px;
+      background-color: $peach-bg;
+      padding: 6px 8px;
 
-			@include r(992) {
-				display: block;
-				margin-right: 10px;
-			}
-		}
+      @include r(992) {
+        display: block;
+        margin-right: 10px;
+      }
+    }
 
-		&__icon {
-			display: none;
-			width: 32px;
-			height: 36px;
-			fill: $orange-900;
-			stroke: transparent;
+    &__icon {
+      display: none;
+      width: 32px;
+      height: 36px;
+      fill: $orange-900;
+      stroke: transparent;
 
-			@include r(992) {
-				display: block;
-			}
-		}
-	}
+      @include r(992) {
+        display: block;
+      }
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .filter {
   margin-right: 30px;
@@ -1775,6 +1744,9 @@
     background-color: $white;
     border: 1px solid $silver-200;
     border-radius: 5px;
+    &--last {
+      margin-bottom: 35px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -2332,11 +2304,11 @@
   }
   &-header {
     padding: 2px 16px;
-    background-color: #9c27b0;
+    background-color: $white;
     color: white;
   }
   &-close {
-    color: white;
+    color: $dark;
     float: right;
     font-size: 28px;
     &:hover,
@@ -2366,6 +2338,13 @@
       top: 0;
       opacity: 1;
     }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $dark;
+  }
+  .swiper-pagination-bullet-active {
+    background: $orange-900;
   }
 }
 
@@ -2505,6 +2484,7 @@
   }
   &__submit {
     display: flex;
+    flex-wrap: wrap;
   }
   &__inputs,
   &__name {
@@ -2523,19 +2503,55 @@
     padding: 16px 18px;
     line-height: 1.3;
     resize: vertical;
+    margin-bottom: 30px;
     border: 1px solid $gray;
     border-radius: 5px;
-    &::placeholder {
-      color: $dark-gray;
-    }
   }
   &__input {
     padding: 18px;
     width: 260px;
-    border: 1px solid $gray;
-    border-radius: 5px;
-    &::placeholder {
-      color: $dark-gray;
+  }
+  &__checkbox {
+    padding: 0;
+    margin: 0;
+  }
+  &__box {
+    background-color: $white;
+    border: 1px solid $dark-gray;
+  }
+  &__send {
+    margin-bottom: 30px;
+  }
+  &__paragraph {
+    font-size: 18px;
+    line-height: 130%;
+    display: block;
+    margin-left: 50px;
+  }
+}
+
+.recent {
+  padding-bottom: 30px;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__slider {
+    padding: 0 10px;
+  }
+  &__item {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  &-arrow {
+    &__prev {
+      right: 60px;
+      top: -60px;
+      left: auto;
+    }
+    &__next {
+      right: 0;
+      top: -59px;
+      bottom: 0;
     }
   }
 }
