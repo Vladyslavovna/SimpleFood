@@ -51,6 +51,12 @@
   }
 
   &__elem {
+    &--product {
+      @include r(768) {
+        display: none;
+      }
+    }
+
     &:not(:last-child) {
       margin-right: 6px;
     }
@@ -732,7 +738,7 @@
     margin-right: 30px;
     margin-bottom: 30px;
 
-    @include r(768) {
+    @include r(992) {
       margin-right: 0;
       max-width: 95%;
       padding: 0 50px;
@@ -748,6 +754,10 @@
     flex-wrap: wrap;
     margin-right: -30px;
     margin-bottom: 30px;
+
+    @include r(992) {
+      margin-right: 0;
+    }
 
     &--promo {
       justify-content: center;
@@ -883,18 +893,11 @@
 
   &__image {
     border-radius: 10px 10px 0 0;
+  }
 
-    &--item {
-      @include r(992) {
-        width: 90%;
-        object-fit: cover;
-      }
-    }
-
-    @include r(768) {
-      width: 100%;
-      object-fit: cover;
-    }
+  @include r(992) {
+    width: 100%;
+    object-fit: cover;
   }
 
   &__inner {
@@ -1695,6 +1698,10 @@
     color: #fff;
   }
 
+  .jq-selectbox.focused .jq-selectbox__select {
+    border: 1px solid $orange-900;
+  }
+
   &-filter {
     @include r(992) {
       display: flex;
@@ -1744,6 +1751,7 @@
     background-color: $white;
     border: 1px solid $silver-200;
     border-radius: 5px;
+
     &--last {
       margin-bottom: 35px;
     }
@@ -1809,6 +1817,7 @@
 
   &-offer {
     position: relative;
+
     &__list {
       margin-bottom: 25px;
     }
@@ -1973,9 +1982,11 @@
     padding: 15px 0px;
     width: 48px;
     height: 48px;
+
     &--active {
       border: 1px solid $dark;
     }
+
     &--elem {
       @include r(576) {
         display: none;
@@ -2056,54 +2067,126 @@
 
 .product {
   padding-top: 30px;
+
   &-item {
     display: flex;
     margin-bottom: 60px;
+
+    @include r(992) {
+      flex-direction: column;
+      align-items: center;
+
+      @include r(576) {
+        align-items: flex-start;
+      }
+    }
+
     &__element {
       background-color: #fff;
       max-width: 610px;
+      height: 550px;
       width: 100%;
-      padding: 75px 107px;
+      padding: 75px 105px;
       margin-right: 25px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 0px 1px $silver-200;
+
+      @include r(1200) {
+        max-width: 550px;
+        height: 500px;
+        width: 80%;
+        padding: 50px 80px;
+      }
+
+      @include r(992) {
+        margin-bottom: 25px;
+      }
+
+      @include r(576) {
+        height: 345px;
+        width: 100%;
+        padding: 22px 23px;
+        margin-right: 0;
+      }
     }
+
     &__popup {
       max-width: 400px;
       width: 100%;
       height: 400px;
     }
+
     &__nav {
       display: flex;
       margin-bottom: 30px;
+
+      @include r(992) {
+        justify-content: space-evenly;
+      }
+
+      @include r(576) {
+        display: block;
+      }
     }
+
     &__form {
       width: 158px;
       height: 44px;
       margin-right: 20px;
+
+      @include r(576) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
     }
+
     &-arrow {
       &__prev {
         width: 60px;
         height: 60px;
         z-index: 11;
         position: absolute;
-        bottom: 40%;
+        bottom: 39%;
         left: -100px;
         transform: rotate(180deg);
+
+        @include r(1200) {
+          left: -80px;
+        }
+
+        @include r(576) {
+          display: none;
+        }
       }
+
       &__next {
         position: absolute;
         right: -100px;
         top: 47%;
         width: 60px;
         height: 60px;
+
+        @include r(1200) {
+          right: -80px;
+        }
+
+        @include r(576) {
+          display: none;
+        }
       }
+
       &__right {
         width: 18px;
         height: 32px;
         fill: $dark;
         stroke: transparent;
+
+        @include r(576) {
+          display: none;
+        }
       }
     }
+
     &__btn {
       width: 247px;
       padding: 11px 38px;
@@ -2111,16 +2194,20 @@
       font-size: 14px;
       line-height: 1.3;
       height: 44px;
+
       &:hover .product-item__icon {
         stroke: $orange-900;
       }
+
       &:focus .product-item__icon {
         stroke: $orange-900;
       }
+
       &:active .product-item__icon {
         stroke: $orange-900;
       }
     }
+
     &__icon {
       width: 17px;
       height: 17px;
@@ -2129,21 +2216,55 @@
       stroke-width: 2;
       margin-right: 16px;
     }
+
     &__title {
       margin-bottom: 30px;
       font-size: 36px;
       line-height: 1.3;
+
+      @include r(1200) {
+        font-size: 30px;
+      }
+
+      @include r(576) {
+        font-size: 24px;
+        line-height: 1.3;
+        width: 267px;
+      }
     }
+
     &__star {
       margin-bottom: 25px;
+
+      &--top {
+        @include r(992) {
+          margin: 0 auto;
+          margin-bottom: 10px;
+        }
+
+        @include r(576) {
+          margin: 0;
+          margin-bottom: 15px;
+        }
+      }
     }
+
     &__price {
       display: block;
       font-weight: 600;
       font-size: 25px;
       margin-bottom: 20px;
       color: $title;
+
+      @include r(992) {
+        text-align: center;
+      }
+
+      @include r(576) {
+        text-align: start;
+      }
     }
+
     &__subtitle {
       font-weight: 400;
       font-size: 24px;
@@ -2151,18 +2272,22 @@
       color: $title;
       margin-bottom: 15px;
     }
+
     &__line {
       margin-bottom: 20px;
     }
+
     &__list {
       margin-bottom: 20px;
     }
+
     &__rules {
       font-size: 16px;
       line-height: 1.5;
       color: $paragraph;
       letter-spacing: 0.03em;
     }
+
     .jq-number__spin {
       position: absolute;
       top: 0;
@@ -2177,16 +2302,19 @@
       border-radius: 0px 3px 3px 0px;
       transition: box-shadow 0.5s ease-in, background-color 0.5s ease-in,
         color 0.5s ease-in;
+
       &:focus {
         box-shadow: 0 0 0 2px $peach-shadow;
         background: $peach-border;
         color: $orange-900;
       }
+
       &:hover {
         background: $peach-border;
         box-shadow: 0 5px 12px rgba(255, 104, 56, 0.2), 0 0 0 2px $peach-shadow;
         color: $orange-900;
       }
+
       &:active {
         background: $peach-border;
         color: $orange-900;
@@ -2220,6 +2348,7 @@
       bottom: 0;
       left: 0;
       border-radius: 3px 0px 0px 3px;
+
       &:after {
         content: "";
         border: none;
@@ -2234,6 +2363,7 @@
       left: 0;
       height: 32px;
     }
+
     .number-plus-minus .jq-number__spin.plus {
       right: 0;
       left: auto;
@@ -2265,32 +2395,55 @@
       text-align: center;
     }
   }
+
   &-tab {
     padding: 30px 0 120px;
   }
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 13; /* Sit on top */
-  padding: 54px 96px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 13;
+  /* Sit on top */
+  padding: 54px 96px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+
+  /* Black w/ opacity */
   &-img {
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     height: 400px;
     display: block;
     margin: 0 auto;
+
+    @include r(576) {
+      max-width: 300px;
+      height: 300px;
+    }
   }
+
   &-slider__image {
     margin: auto;
+
+    @include r(576) {
+      padding: 60px 6px;
+    }
   }
+
   &-content {
     position: relative;
     background-color: $white;
@@ -2302,15 +2455,18 @@
     animation-name: animatetop;
     animation-duration: 0.4s;
   }
+
   &-header {
     padding: 2px 16px;
     background-color: $white;
     color: white;
   }
+
   &-close {
     color: $dark;
     float: right;
     font-size: 28px;
+
     &:hover,
     &:focus {
       color: #000;
@@ -2318,11 +2474,13 @@
       cursor: pointer;
     }
   }
+
   @-webkit-keyframes animatetop {
     from {
       top: -300px;
       opacity: 0;
     }
+
     to {
       top: 0;
       opacity: 1;
@@ -2334,15 +2492,22 @@
       top: -300px;
       opacity: 0;
     }
+
     to {
       top: 0;
       opacity: 1;
     }
   }
+
   .swiper-button-next,
   .swiper-button-prev {
     color: $dark;
+
+    @include r(576) {
+      display: none;
+    }
   }
+
   .swiper-pagination-bullet-active {
     background: $orange-900;
   }
@@ -2352,96 +2517,134 @@
   margin: 0 auto;
   max-width: 690px;
   width: 100%;
+
   &__btns {
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
+    overflow: auto;
+    @include line-clamp(1);
+    @include r(768) {
+      padding-bottom: 10px;
+      justify-content: start;
+      overflow-x: auto;
+      -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+    }
   }
+
   &__btn {
     position: relative;
-    flex-grow: 1;
-    margin: 0;
     border: none;
     font-size: 24px;
     line-height: 1.5;
     color: $title;
+    @include r(576) {
+      font-size: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 60px;
+      @include r(576) {
+        margin-right: 30px;
+      }
+    }
+
     &--active {
       color: $orange-900;
     }
   }
-  &__btn span {
-    position: relative;
-    z-index: 2;
-    padding: 0;
-    margin: 0;
-    transition: color 0.5s ease;
-  }
-  &__btn:not(.tab__btn--active):hover span {
-    color: $peach-shadow;
-  }
+
   &__items {
     position: relative;
   }
+
   &__element {
     margin-bottom: 25px;
   }
+
   &__item {
     display: none;
     width: 100%;
     font-size: 14px;
     line-height: 1.4em;
     animation: fadeEffect 0.6s ease;
+
     &--active {
       display: block;
     }
   }
+
   @keyframes fadeEffect {
     from {
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0px);
     }
   }
+
   &__about {
     margin-bottom: 15px;
   }
+
   &__descr,
-  &__subtitle {
+  &__subtitle,
+  &__specific {
     font-weight: 400;
     font-size: 20px;
     line-height: 1.5;
     opacity: 0.9;
+    @include r(768) {
+      font-size: 18px;
+    }
+    @include r(576) {
+      font-size: 16px;
+    }
   }
+
   &__specific {
     font-weight: 600;
-    font-size: 20px;
-    line-height: 1.5;
   }
+
   &__title {
     line-height: 1.2;
     font-size: 24px;
     margin-bottom: 30px;
   }
+
   &__review {
     margin-bottom: 60px;
+
     &-wrap {
       display: flex;
       font-style: normal;
+      @include r(768) {
+        margin-bottom: 15px;
+      }
     }
+
     &-about {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
       align-items: center;
+      @include r(768) {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 0;
+      }
     }
   }
+
   &__image {
     border-radius: 50%;
     margin-right: 25px;
   }
+
   &__author {
     font-style: normal;
     display: flex;
@@ -2452,22 +2655,27 @@
     line-height: 1.3;
     margin-bottom: 10px;
   }
+
   &__date {
     font-weight: 400;
     font-size: 18px;
   }
+
   &__comment {
     margin-bottom: 20px;
     font-style: normal;
   }
+
   &__line {
     margin-bottom: 25px;
   }
+
   &__grade {
     display: flex;
     margin-bottom: 20px;
     align-items: center;
   }
+
   &__label {
     font-size: 20px;
     line-height: 1.3;
@@ -2477,23 +2685,28 @@
       margin-bottom: 15px;
     }
   }
+
   &__textarea {
     display: flex;
     flex-direction: column;
     margin-right: 30px;
   }
+
   &__submit {
     display: flex;
     flex-wrap: wrap;
   }
+
   &__inputs,
   &__name {
     display: flex;
     flex-direction: column;
   }
+
   &__name {
     margin-bottom: 10px;
   }
+
   &__textfield {
     display: block;
     width: 400px;
@@ -2506,48 +2719,117 @@
     margin-bottom: 30px;
     border: 1px solid $gray;
     border-radius: 5px;
+    @include r(768) {
+      width: 345px;
+      margin-bottom: 20px;
+    }
   }
+
   &__input {
     padding: 18px;
     width: 260px;
+    @include r(768) {
+      width: 345px;
+    }
   }
+
   &__checkbox {
     padding: 0;
     margin: 0;
   }
+
   &__box {
     background-color: $white;
     border: 1px solid $dark-gray;
   }
+
   &__send {
     margin-bottom: 30px;
   }
+
   &__paragraph {
     font-size: 18px;
     line-height: 130%;
     display: block;
     margin-left: 50px;
+    @include r(768) {
+      font-size: 18px;
+    }
   }
 }
 
 .recent {
   padding-bottom: 30px;
+
   &__title {
     margin-bottom: 30px;
   }
+
   &__slider {
     padding: 0 10px;
+    @include r(576) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 299px;
+    }
+    .slick {
+      &-dots {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+
+        li {
+          &:not(:last-child) {
+            margin-right: 15px;
+          }
+
+          button {
+            padding: 0;
+            font-size: 0;
+            width: 15px;
+            height: 15px;
+            background-color: $gray;
+            border-radius: 50%;
+            transition: box-shadow 0.4s ease, background-color 0.4s ease;
+
+            &:focus {
+              box-shadow: 0 0 0 2px #ff6838;
+            }
+
+            &:hover {
+              background: #fff2ed;
+              box-shadow: 0 0 0 2px $peach-shadow;
+            }
+
+            &:active {
+              background: #ffae94;
+            }
+          }
+
+          &.slick-active {
+            button {
+              background-color: $orange-900;
+            }
+          }
+        }
+      }
+    }
   }
+
   &__item {
     margin-left: 10px;
     margin-top: 10px;
+    @include r(576) {
+      margin: 0;
+    }
   }
+
   &-arrow {
     &__prev {
       right: 60px;
       top: -60px;
       left: auto;
     }
+
     &__next {
       right: 0;
       top: -59px;
