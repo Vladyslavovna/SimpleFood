@@ -17,9 +17,7 @@
 
 <body>
 
-
-
-	 <header class="header">
+	<header class="header">
 		<div class="burger-menu">
 			<ul class="burger-menu--top">
 				<li class="burger-menu--elem">
@@ -29,7 +27,7 @@
 					</a>
 				</li>
 				<li class="burger-menu--elem">
-					<button class="burger-menu--btn">
+					<button class="burger-menu--btn" type="button">
 						<span class="sr-only">Закрыть меню</span>
 					</button>
 				</li>
@@ -144,7 +142,7 @@
 					<ul class="user">
 						<li class="user__item">
 							<span class="sr-only">Ссылка на поиск товаров</span>
-							<button class="user__btn">
+							<button class="user__btn" type="button">
 								<svg class="user__icon icon">
 									<use xlink:href="images/sprite.svg#icon-search"></use>
 								</svg>
@@ -153,7 +151,7 @@
 
 						<li class="user__item">
 							<span class="sr-only">Ссылка на корзину клиента</span>
-							<button class="user__btn">
+							<button class="user__btn" type="button">
 								<svg class="user__icon icon">
 									<use xlink:href="images/sprite.svg#icon-cart"></use>
 								</svg>
@@ -171,11 +169,11 @@
 				</nav>
 			</div>
 		</div>
-	</header> 
+	</header>
 
 	<main class="main">
 
-		 <section class="breadcrumps">
+		<section class="breadcrumps product-breadcrumps">
 			<div class="container">
 				<ul class="breadcrumps__list">
 					<li class="breadcrumps__elem">
@@ -199,24 +197,12 @@
 					</li>
 				</ul>
 			</div>
-		</section> 
+		</section>
 
 		<section class="product">
 			<div class="container">
-
-
-
 				<div class="product-item">
 					<div class="product-item__element">
-
-
-
-
-
-
-
-
-
 						<div class="product-item__slider slick">
 							<div class="prosuct-item__slide">
 								<a id="myBtn" class="product-item__link">
@@ -241,7 +227,7 @@
 							<div class=" product-item__content modal-content swiper">
 								<div class="modal-header">
 									<span class="modal-close">&times;</span>
-									
+
 								</div>
 								<div class="modal-slider swiper-wrapper">
 
@@ -266,14 +252,6 @@
 							</div>
 
 						</div>
-
-
-
-
-
-
-
-
 
 					</div>
 
@@ -331,26 +309,17 @@
 		<div class="decorative-line"></div>
 
 
-		 <section class="product-tab">
+		<section class="product-tab">
 			<div class="container">
-
-
-
-
-
-
-
-
-
 				<div class="product-tab__block tab">
 					<div class="tab__btns">
-						<button class="tab__btn tab__btn--active" data-item="item-1">
+						<button class="tab__btn tab__btn--active" data-item="item-1" type="button">
 							Описание
 						</button>
-						<button class="tab__btn" data-item="item-2">
+						<button class="tab__btn" data-item="item-2" type="button">
 							Характеристики
 						</button>
-						<button class="tab__btn" data-item="item-3">
+						<button class="tab__btn" data-item="item-3" type="button">
 							Отзывы (2)
 						</button>
 					</div>
@@ -489,21 +458,23 @@
 								<div class="tab__textarea">
 									<label class="tab__label tab__label--text" for="message">Ваша отзыв
 										*</label>
-									<textarea class="tab__textfield form-animation" name="message" required="required" id="message"
+									<textarea class="tab__textfield form-animation" name="message"
+										required="required" id="message"
 										placeholder="Введите текст отзыва"></textarea>
 								</div>
 
 								<div class="tab__inputs">
 									<div class="tab__name">
 										<label class="tab__label tab__label--text" for="name">Имя</label>
-										<input class="tab__input form-animation" type="text"  name="name"
+										<input class="tab__input form-animation" type="text" name="name"
 											id="name" placeholder="Введите ваше имя">
 									</div>
 
 									<div class="tab__name">
 										<label class="tab__label tab__label--text" for="name">E-mail *</label>
-										<input class="tab__input form-animation" type="text" required="required" name="name"
-											id="name1" placeholder="youremail@mail.com">
+										<input class="tab__input form-animation" type="text"
+											required="required" name="name" id="name1"
+											placeholder="youremail@mail.com">
 									</div>
 								</div>
 								<div class="tab__send">
@@ -517,13 +488,7 @@
 								</div>
 								<button class="tab__button button" type="submit">Оставить отзыв</button>
 							</form>
-
 						</div>
-
-
-
-
-
 					</div>
 				</div>
 
@@ -531,114 +496,109 @@
 		</section>
 
 
-		 <section class="recent">
-<div class="container">
-	<h3 class="recent__title title">Вас может заинтересовать</h3>
-	<ul class="popular__catalog recent__slider">
+		<section class="recent">
+			<div class="container">
+				<h3 class="recent__title title">Вас может заинтересовать</h3>
+				<ul class="popular__catalog recent__slider">
 
-		<li class="popular__catalog-item recent__item">
-			<article class="product-card">
-				<a class="product-card__link" href="#">
-					<img src="images/card/beefburger.svg" alt="Картинка бифбургера" width="140"
-						height="140">
-				</a>
-				<h3 class="product-card__title">Бифбургер</h3>
-				<span class="product-card__price">190 грн</span>
-				<button class="product-card__btn button" type="button">В корзину</button>
-			</article>
-		</li>
+					<li class="popular__catalog-item recent__item">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img src="images/card/beefburger.svg" alt="Картинка бифбургера" width="140"
+									height="140">
+							</a>
+							<h3 class="product-card__title">Бифбургер</h3>
+							<span class="product-card__price">190 грн</span>
+							<button class="product-card__btn button" type="button">В корзину</button>
+						</article>
+					</li>
 
 
-		<li class="popular__catalog-item recent__item ">
-			<article class="product-card">
-				<a class="product-card__link" href="#">
-					<img src="images/card/blackcburg.svg" alt="Картинка черного гамбургера"
-						width="140" height="140">
-				</a>
-				<h3 class="product-card__title">Черный гамбургер</h3>
-				<span class="product-card__price">199 грн</span>
-				<button class="product-card__btn button" type="button">В корзину</button>
-			</article>
-		</li>
+					<li class="popular__catalog-item recent__item ">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img src="images/card/blackcburg.svg" alt="Картинка черного гамбургера"
+									width="140" height="140">
+							</a>
+							<h3 class="product-card__title">Черный гамбургер</h3>
+							<span class="product-card__price">199 грн</span>
+							<button class="product-card__btn button" type="button">В корзину</button>
+						</article>
+					</li>
 
-		<li class="popular__catalog-item recent__item ">
-			<article class="product-card">
-				<a class="product-card__link" href="#">
-					<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
-						height="140">
-				</a>
-				<h3 class="product-card__title">Чикен бургер</h3>
-				<span class="product-card__price">180 грн</span>
-				<button class="product-card__btn button" type="button">В корзину</button>
-			</article>
-		</li>
-		<li class="popular__catalog-item recent__item ">
-			<article class="product-card">
-				<a class="product-card__link" href="#">
-					<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
-						height="140">
-				</a>
-				<h3 class="product-card__title">Чикен бургер</h3>
-				<span class="product-card__price">180 грн</span>
-				<button class="product-card__btn button" type="button">В корзину</button>
-			</article>
-		</li>
-		<li class="popular__catalog-item recent__item ">
-			<article class="product-card">
-				<a class="product-card__link" href="#">
-					<img src="images/card/beefburger.svg" alt="Картинка бифбургера" width="140"
-						height="140">
-				</a>
-				<h3 class="product-card__title">Бифбургер</h3>
-				<span class="product-card__price">190 грн</span>
-				<button class="product-card__btn button" type="button">В корзину</button>
-			</article>
-		</li>
+					<li class="popular__catalog-item recent__item ">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
+									height="140">
+							</a>
+							<h3 class="product-card__title">Чикен бургер</h3>
+							<span class="product-card__price">180 грн</span>
+							<button class="product-card__btn button" type="button">В корзину</button>
+						</article>
+					</li>
+					<li class="popular__catalog-item recent__item ">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
+									height="140">
+							</a>
+							<h3 class="product-card__title">Чикен бургер</h3>
+							<span class="product-card__price">180 грн</span>
+							<button class="product-card__btn button" type="button">В корзину</button>
+						</article>
+					</li>
+					<li class="popular__catalog-item recent__item ">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img src="images/card/beefburger.svg" alt="Картинка бифбургера" width="140"
+									height="140">
+							</a>
+							<h3 class="product-card__title">Бифбургер</h3>
+							<span class="product-card__price">190 грн</span>
+							<button class="product-card__btn button" type="button">В корзину</button>
+						</article>
+					</li>
 
-		<li class="popular__catalog-item recent__item ">
-			<article class="product-card">
-				<a class="product-card__link" href="#">
-					<img src="images/card/blackcburg.svg" alt="Картинка черного гамбургера"
-						width="140" height="140">
-				</a>
-				<h3 class="product-card__title">Черный гамбургер</h3>
-				<span class="product-card__price">199 грн</span>
-				<button class="product-card__btn button" type="button">В корзину</button>
-			</article>
-		</li>
+					<li class="popular__catalog-item recent__item ">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img src="images/card/blackcburg.svg" alt="Картинка черного гамбургера"
+									width="140" height="140">
+							</a>
+							<h3 class="product-card__title">Черный гамбургер</h3>
+							<span class="product-card__price">199 грн</span>
+							<button class="product-card__btn button" type="button">В корзину</button>
+						</article>
+					</li>
 
-		<li class="popular__catalog-item recent__item ">
-			<article class="product-card">
-				<a class="product-card__link" href="#">
-					<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
-						height="140">
-				</a>
-				<h3 class="product-card__title">Чикен бургер</h3>
-				<span class="product-card__price">180 грн</span>
-				<button class="product-card__btn button" type="button">В корзину</button>
-			</article>
-		</li>
-		<li class="popular__catalog-item recent__item ">
-			<article class="product-card">
-				<a class="product-card__link" href="#">
-					<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
-						height="140">
-				</a>
-				<h3 class="product-card__title">Чикен бургер</h3>
-				<span class="product-card__price">180 грн</span>
-				<button class="product-card__btn button" type="button">В корзину</button>
-			</article>
-		</li>
-	</ul>
-</div>
+					<li class="popular__catalog-item recent__item ">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
+									height="140">
+							</a>
+							<h3 class="product-card__title">Чикен бургер</h3>
+							<span class="product-card__price">180 грн</span>
+							<button class="product-card__btn button" type="button">В корзину</button>
+						</article>
+					</li>
+					<li class="popular__catalog-item recent__item ">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img src="images/card/chickenburg.svg" alt="Картинка чикен бургера" width="140"
+									height="140">
+							</a>
+							<h3 class="product-card__title">Чикен бургер</h3>
+							<span class="product-card__price">180 грн</span>
+							<button class="product-card__btn button" type="button">В корзину</button>
+						</article>
+					</li>
+				</ul>
+			</div>
 		</section>
-
-
-
 	</main>
-
-
-	 <footer class="footer">
+	<footer class="footer">
 		<div class="container">
 			<div class="footer__top">
 				<div class="footer__form">
@@ -648,8 +608,8 @@
 					</a>
 					<form class="form" action="#">
 						<label class="sr-only">Email</label>
-						<input class="form__input form-animation" type="text" id="tel" name="email" required="required"
-							placeholder="Ваш Email">
+						<input class="form__input form-animation" type="text" id="tel" name="email"
+							required="required" placeholder="Ваш Email">
 						<button class="form__btn button" type="submit">
 							<svg class="form__icon icon">
 								<use xlink:href="images/sprite.svg#icon-telegram"></use>
@@ -815,7 +775,6 @@
 				</span>
 			</div>
 		</div>
-
 	</footer>
 
 	<script src="js/main.min.js"></script>

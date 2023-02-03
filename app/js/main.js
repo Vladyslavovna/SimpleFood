@@ -170,36 +170,6 @@ $(function () {
 
 
 	$(function () {
-		// $(".recent__slider").slick({
-		// 	arrows: true,
-		// 	slidesToShow: 5,
-		// 	slidesToScroll: 3,
-		// 	dots: false,
-		// 	mobileFirst:false,
-		// 	prevArrow: '<button class="reviews-arrow__prev recent-arrow__prev"><svg class="reviews-arrow__right icon"><use xlink:href="images/sprite.svg#icon-left"></use></svg></button> ',
-		// 	nextArrow: '<button class="reviews-arrow__next recent-arrow__next"> <svg class="reviews-arrow__right icon"><use xlink:href="images/sprite.svg#icon-left"></use></svg></button>',
-		// 	responsive: [{
-		// 		breakpoint: 1200,
-		// 		settings: {
-		// 			slidesToShow: 4,
-		// 			slidesToScroll: 3,
-		// 		},
-		// 		breakpoint: 992,
-		// 		settings: {
-		// 			slidesToShow: 3,
-		// 			slidesToScroll: 3,
-		// 			arrows: false,
-		// 			dots: true,
-		// 		},
-		// 		breakpoint: 768,
-		// 		settings: {
-		// 			slidesToShow: 2,
-		// 			slidesToScroll: 3,
-		// 			arrows: false,
-		// 			dots: true,
-		// 		},
-		// 	}],
-		// });
 		$('.recent__slider').slick({
 			arrows: true,
 			slidesToShow: 5,
@@ -210,9 +180,17 @@ $(function () {
 			nextArrow: '<button class="reviews-arrow__next recent-arrow__next"> <svg class="reviews-arrow__right icon"><use xlink:href="images/sprite.svg#icon-left"></use></svg></button>',
 			responsive: [
 				{
-					breakpoint: 991,
+					breakpoint: 992,
 					settings: {
 						slidesToShow: 4,
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 3,
+						arrows: false,
+						dots: true,
 					}
 				},
 				{
@@ -335,7 +313,13 @@ $(function () {
 
 
 
-
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 1) {
+		  $(".header__top").addClass("header__top--active"); 
+		} else {
+		  $(".header__top").removeClass("header__top--active");
+		}
+	   });
 
 
 

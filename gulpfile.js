@@ -67,7 +67,7 @@ function images() {
 }
 
 const htmlInclude = () => {
-  return src(["app/html/*.html"]) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы
+  return src(["app/html/components/*.html"]) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы
     .pipe(
       fileInclude({
         prefix: "@",

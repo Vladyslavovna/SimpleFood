@@ -6,20 +6,41 @@
 @import "global";
 
 .header {
+  padding: 60px 0;
+  @include r(992) {
+    padding: 50px 0;
+  }
+  @include r(768) {
+    padding: 24px 0;
+  }
   &__wrap {
-    padding: 60px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+  }
+}
 
-    @include r(992) {
-      padding: 50px 0;
-    }
+.header__top.header__top--active {
+  backdrop-filter: blur(10px);
+  background-color: $light-peach;
+  padding: 15px 0;
+  @include r(992) {
+    padding: 5px 0;
+  }
+}
 
-    @include r(768) {
-      padding: 24px 0;
-    }
+.header__top {
+  line-height: 1.3;
+  padding-top: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: padding 0.3s ease-in, background-color 0.4s ease;
+  z-index: 10;
+  @include r(992) {
+    padding-top: 15px;
   }
 }
 
@@ -220,8 +241,9 @@
   width: 320px;
   background-color: $white;
   transform: translateX(-100%);
-  position: absolute;
+  position: fixed;
   z-index: 3;
+  top: 0;
   height: 100vh;
   overflow-y: auto;
   transition: 0.5s;
@@ -2400,8 +2422,8 @@
     @include r(992) {
       padding: 25px 0 90px;
     }
-    @include r(768){
-	padding: 15px 0 60px;
+    @include r(768) {
+      padding: 15px 0 60px;
     }
   }
 }
@@ -2772,7 +2794,7 @@
 
   &__slider {
     padding: 0 10px;
-    @include r(576) {
+    @include r(768) {
       grid-template-columns: 1fr;
       grid-template-rows: 299px;
     }
