@@ -1,0 +1,191 @@
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background-color: $silver-100;
+  color: $dark;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.5s ease;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.lock {
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section {
+  padding: 60px 0 60px;
+  @include r(992) {
+    padding: 30px 0 30px;
+  }
+  @include r(768) {
+    padding: 20px 0 20px;
+  }
+}
+
+.button {
+  padding: 12px 32px;
+  background-color: $orange-900;
+  color: $white;
+  border-radius: 5px;
+  line-height: 1.3;
+  font-size: 14px;
+  transition: box-shadow 0.5s ease-in, background-color 0.5s ease-in,
+    color 0.5s ease-in;
+  &:focus {
+    box-shadow: 0 0 0 2px $peach-shadow;
+    background-color: $light-peach;
+    color: $orange-900;
+  }
+  &:hover {
+    background-color: $white;
+    box-shadow: 0 5px 12px rgba(255, 104, 56, 0.2), 0 0 0 2px $peach-shadow;
+    color: $orange-900;
+  }
+  &:active {
+    background-color: $light-peach;
+    color: $orange-900;
+  }
+}
+
+.icon {
+  fill: transparent;
+  stroke: $dark;
+  transition: stroke 0.5s ease, fill 0.5s ease;
+}
+
+.more {
+  @include r(768) {
+    font-size: 16px;
+  }
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $dark;
+    bottom: 1px;
+    transform: scale(1);
+    left: 0;
+    transition: 0.5s;
+  }
+  &:focus::after {
+    transform: scale(0);
+  }
+  &:active::after {
+    transform: scale(0);
+  }
+  &:hover::after {
+    transform: scale(0);
+  }
+}
+
+.animated-links {
+  transition: box-shadow 0.5s ease, color 0.5s ease, text-shadow 0.5s ease,
+    border-radius 0.5s ease;
+  border-radius: 5px;
+  &:focus {
+    box-shadow: 0 0 0 2px $orange-900;
+  }
+  &:hover {
+    color: $orange-900;
+  }
+  &:active {
+    color: $orange-900;
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+  }
+}
+
+.title {
+  display: block;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.3;
+  color: $title;
+  @include r(992) {
+    font-style: 30px;
+  }
+  @include r(768) {
+    font-size: 24px;
+  }
+}
+
+.descr {
+  font-size: 20px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.bottom {
+  padding: 24px 0;
+  background-color: $light-peach;
+}
+
+.decorative-line {
+  height: 1px;
+  width: 100%;
+  background-color: $dark-gray;
+  opacity: 0.2;
+}
+
+.form-animation{
+	border: 1px solid $gray;
+	border-radius: 5px;
+	padding: 10px 15px;
+	transition: box-shadow 0.5s ease-in-out;
+ 
+	&:focus {
+	  box-shadow: 0 0 0 2px $orange-900;
+	}
+ 
+	&::placeholder {
+	  color: $gray;
+	  font-size: 14px;
+	  line-height: 1.3;
+	  transition: color 0.5s ease;
+	}
+ 
+	&:hover::placeholder {
+	  color: $dark;
+	}
+}
