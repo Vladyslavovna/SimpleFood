@@ -9,7 +9,6 @@ const imagemin = require("gulp-imagemin");
 const svgSprite = require("gulp-svg-sprite");
 const cheerio = require("gulp-cheerio");
 const browserSync = require("browser-sync").create();
-const fileInclude = require("gulp-file-include");
 
 function browsersync() {
   browserSync.init({
@@ -66,17 +65,7 @@ function images() {
     .pipe(dest("dist/images"));
 }
 
-const htmlInclude = () => {
-  return src(["app/html/components/*.html"]) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы
-    .pipe(
-      fileInclude({
-        prefix: "@",
-        basepath: "@file",
-      })
-    )
-    .pipe(dest("app")) // указываем, в какую папку поместить готовый файл html
-    .pipe(browserSync.stream());
-}
+
 
 function svgSprites() {
   return src("app/images/icons/*.svg")
@@ -127,12 +116,9 @@ exports.watching = watching;
 exports.images = images;
 exports.svgSprites = svgSprites;
 exports.cleanDist = cleanDist;
-exports.htmlInclude = htmlInclude;
-
 exports.build = series(cleanDist, images, build);
 exports.default = parallel(
   svgSprites,
-  htmlInclude,
   styles,
   scripts,
   browsersync,
